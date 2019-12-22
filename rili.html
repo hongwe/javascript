@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #div1 {
+        width: 200px;
+        height: 150px;
+        background: #fff;
+        margin: 10px;
+      }
+      .calendar {
+        width: 200px;
+        height: 600px;
+      }
+      .calendar li {
+        float: left;
+        width: 60px;
+        height: 60px;
+        border: 1px solid #000;
+        list-style: none;
+        color: #fff;
+        background: #000;
+        margin: 2px;
+      }
+      .calendar li.active{ background: #fff; color: #f00;}
+    </style>
+    <script>
+      window.onload = function() {
+        // var oDiv = document.getElementById("div1");
+        // var txt1 = document.getElementById("txt1");
+        // var btn1 = document.getElementById("btn1");
+
+        // btn1.onclick = function(){
+        //     oDiv.innerHTML=txt1.value
+        // }
+
+        // for (var i = 0; i < aBtn.length; i++) {
+        //   aBtn[i].index = i;
+        //   aBtn[i].onclick = function() {
+        //     for (var i = 0; i < aBtn.length; i++) {
+        //       aBtn[i].className = "";
+        //       aDiv[i].style = "none";
+        //     }
+        //     this.className = "active";
+        //     aDiv[this.index].style.display = "block";
+        //   };
+
+        //   aBtn.className = "";
+        // }
+        var arr = [
+            '1月内容',
+            '2月内容',
+            '3月内容',
+            '4月内容',
+            '5月内容',
+            '6月内容',
+            '7月内容',
+            '8月内容',
+            '9月内容',
+            '10月内容',
+            '11月内容',
+            '12月内容'
+        ]
+
+        var oTab = document.getElementById("tab");
+        var aLi = oTab.getElementsByTagName("li");
+        var oTxt = oTab.getElementsByTagName("div")[0];
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].index = i;
+            aLi[i].onmouseover =function(){
+                for (var i = 0; i < aLi.length; i++) {
+                    aLi[i].className = "";
+
+                }
+                this.className = "active"
+                oTxt.innerHTML ='<h2>' + (this.index+1) + '月<h2><div>' +arr[this.index]+'</div>'
+            }
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" id="txt1" />
+    <input type="button" id="btn1" />
+
+    <div id="div1"></div>
+
+    <div id="tab" class="calendar">
+      <ul>
+        <li class="active">1月</li>
+        <li>2月</li>
+        <li>3月</li>
+        <li>4月</li>
+        <li>5月</li>
+        <li>6月</li>
+        <li>7月</li>
+        <li>8月</li>
+        <li>9月</li>
+        <li>10月</li>
+        <li>11月</li>
+        <li>12月</li>
+      </ul>
+      <div class="text"></div>
+    </div>
+  </body>
+</html>
