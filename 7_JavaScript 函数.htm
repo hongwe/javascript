@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- <script src="myScript.js"></script> -->
+    <style>
+      h1 {
+        font-size: 30px;
+      }
+      h2 {
+        font-size: 24px;
+        text-indent: 2em;
+      }
+      h3 {
+        font-size: 16px;
+        text-indent: 4em;
+      }
+      h4 {
+        font-size: 16px;
+        color: red;
+        text-indent: 4em;
+      }
+      .example_code {
+        line-height: 1.4em;
+        width: 98%;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #d4d4d4;
+        font-size: 110%;
+        font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console",
+          "Courier New", monospace;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+
+  <body>
+      <script>
+          function myFunction()
+          {
+              alert("Hello World!");
+          }
+          </script>
+     <button onclick="myFunction()">点我</button>
+
+
+
+     <p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction2('Harry Potter','Wizard')">点击这里</button>
+<script>
+function myFunction2(name,job){
+    alert("Welcome " + name + ", the " + job);
+}
+
+function myFunction3()
+{
+    var x=5;
+    return x;
+}
+</script>
+
+<button onclick="myFunction3()">点我3</button>
+
+  </body>
+</html>
