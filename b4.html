@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 10px;
+        background: #000;
+        margin: 10px;
+      }
+      .aaa {
+        background: #f00;
+      }
+    </style>
+    <script>
+      window.onload = function() {
+        var aDiv = document.getElementsByTagName("div");
+        //console.log(aDiv);
+
+        // var i = 0;
+        // while (i < 5) {
+        //   aDiv[i].className = "aaa bbb" + i;
+        //   i++;
+        // }
+
+        for (var i = 0; i < aDiv.length; i++) {
+          aDiv[i].className = "aaa bbb" + i;
+        }
+
+        var oDiv = document.getElementById("checkbox-group");
+        var cInput = oDiv.getElementsByTagName("input");
+        var allQ = document.getElementById("allx");
+        var allBQ = document.getElementById("allbx");
+        var allFQ = document.getElementById("fx");
+
+        allQ.onclick = function() {
+          for (var i = 0; i < cInput.length; i++) {
+            cInput[i].checked = true;
+          }
+        };
+        allBQ.onclick = function() {
+          for (var i = 0; i < cInput.length; i++) {
+            cInput[i].checked = false;
+          }
+        };
+        allFQ.onclick = function() {
+          for (var i = 0; i < cInput.length; i++) {
+            if (cInput[i].checked == true) {
+              cInput[i].checked = false;
+            } else {
+              cInput[i].checked = true;
+            }
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <input type="button" value="全选" id="allx" />f
+    <input type="button" value="全不选" id="allbx" />
+    <input type="button" value="反选" id="fx" />
+    <div class="checkbox-group" id="checkbox-group">
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+      <input type="checkbox" />
+    </div>
+  </body>
+</html>
