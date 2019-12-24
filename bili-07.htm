@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>7</title>
+    <link rel="stylesheet" href="css.css" id="lina" />
+  </head>
+  <style type="text/css">
+    .red {
+      width: 200px;
+      height: 20px;
+      background: red;
+    }
+
+    .green {
+      width: 200px;
+      height: 20px;
+      background: green;
+    }
+  </style>
+  <script type="text/javascript">
+    // 算数运算符 + - * / %
+    // 赋值运算符 =   +=  -+  *=  /=  %=
+    // 关系运算符 > = < <= >= == === != !==
+    // 逻辑运算符 ! || &&
+    //优先级  括号
+    //求模%
+    window.onload = function() {
+      var aList = document.getElementsByTagName("li");
+      for (var i = 0; i < aList.length; i++) {
+        if (i % 2 == 0) {
+          aList[i].className = "red";
+        } else {
+          aList[i].className = "green";
+        }
+      }
+      //秒转时间
+      var s = 156;
+      alert(parseInt(s / 60) + "分" + (s % 60) + "秒");
+
+      //i=i+1 i+=1 i++
+      //&& 并且  ||或    !否
+
+      //n是不是两位数(整数 正数)
+      //n>9
+      var n = 45;
+      if (n > 9 && n < 100) {
+        alert("n是两位数");
+      } else {
+        alert("n不是两位数");
+      }
+
+      // if (条件1) {
+      //   语句1;
+      // } else if (条件2) {
+      //   语句2;
+      // } else {
+      //   语句3;
+      // }
+      var name = "abc";
+      var sex = "女";
+      switch (sex) {
+        case "男":
+          alert(name + "先生");
+          break;
+        case "女":
+          alert(name + "小姐");
+          break;
+      }
+
+      //三目运算符 三元运算符
+      //条件?语句1:语句2
+
+      var aN =12
+      aN%2 ==0 ? alert('双数'):alert('单数');
+
+      //break 中断整个循环 continue中断本次循环
+     };
+  </script>
+
+  <body>
+    <ul id="list1">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
+</html>
