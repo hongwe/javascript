@@ -1,1 +1,3 @@
 li{ float:left;}
+
+#ul1 li{ width: 100px; float: none }
