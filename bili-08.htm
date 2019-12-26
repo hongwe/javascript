@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>定时器 无缝滚动</title>
+    <link rel="stylesheet" href="css.css" id="lina" />
+  </head>
+  <style type="text/css">
+    .red {
+      width: 200px;
+      height: 20px;
+      background: red;
+    }
+
+    .green {
+      width: 200px;
+      height: 20px;
+      background: green;
+    }
+  </style>
+  <script type="text/javascript">
+    window.onload = function() {
+      var oWfyd = document.getElementById("wfgundong");
+      var oUl = document.getElementById("list8");
+      var aLi = oUl.getElementsByTagName("li");
+        var speed = 2;
+      oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+      oUl.style.width = aLi[0].offsetWidth * aLi.length + "px";
+
+      function move() {
+        if (oUl.offsetLeft < -oUl.offsetWidth / 2) {
+          oUl.style.left = 0;
+        }
+        if (oUl.offsetLeft > 0) {
+          oUl.style.left = -oUl.offsetWidth / 2 + "px";
+        }
+
+        oUl.style.left = oUl.offsetLeft + speed + "px";
+      }
+
+      var timer = setInterval(move, 30);
+
+      oWfyd.onmouseover = function() {
+        clearInterval(timer);
+      };
+      oWfyd.onmouseout = function() {
+        timer = setInterval(move, 30);
+      };
+      document.getElementsByTagName('a')[0].onclick =function(){
+          speed = -2;
+      }
+      document.getElementsByTagName('a')[1].onclick =function(){
+          speed = 2;
+      }
+    };
+  </script>
+
+  <body>
+      <a href="javascript:;" >向左</a>
+      <a href="javascript:;" >向右</a>
+    <div class="wfgundong" id="wfgundong">
+      <ul id="list8">
+        <li><img src="images/1.png" /></li>
+        <li><img src="images/2.png" /></li>
+        <li><img src="images/3.png" /></li>
+        <li><img src="images/4.png" /></li>
+      </ul>
+    </div>
+  </body>
+</html>
