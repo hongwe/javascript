@@ -21,15 +21,14 @@
 }
 </style>
 <script type="text/javascript">
-
-  //childNodes  只算第一层
-  //nodeType  
-  //children  比childNodes好用
-  //parentNode 父节点
-  //offsetParent  定位的父级
-  //firstChild
-  //lastChild
-  //nextSibing
+//childNodes  只算第一层
+//nodeType  
+//children  比childNodes好用
+//parentNode 父节点
+//offsetParent  定位的父级
+//firstChild   firstElementChild
+//lastChild   lastElementChild
+//nextSibing
 window.onload = function() {
     var oUl = document.getElementById("ul1");
     for (i = 0; i < oUl.childNodes.length; i++) {
@@ -37,7 +36,7 @@ window.onload = function() {
         if (oUl.childNodes[i].nodeType == 3) {
             oUl.childNodes[i].style.background = " red"
         }
-
+      
     }
 };
 </script>
