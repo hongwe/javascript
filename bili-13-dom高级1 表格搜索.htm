@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dom</title>
+    <link rel="stylesheet" href="css.css" id="lina" />
+  </head>
+
+  <script type="text/javascript">
+    //表格
+    //tBodies, tHead, tFoot, rows ,cells
+    //表单
+
+    window.onload = function() {
+      var oTable = document.getElementById("table13");
+      var oBtn = document.getElementById("btn13");
+      var oTxtS = document.getElementById("name2");
+      var oBtnS = document.getElementById("btn13s");
+      var oBtnSs = document.getElementById("btn13ss");
+      var oBtnSss = document.getElementById("btn13sss");
+      var oBtnSsss = document.getElementById("btn13ssss");
+      var oName = document.getElementById("name");
+      var oAge = document.getElementById("age");
+      var id = oTable.tBodies[0].rows.length + 1;
+      //alert(oTable.tBodies[0].rows[1].getElementsByTagName("td")[1].innerHTML);
+      for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+        oTable.tBodies[0].rows[i].onmouseover = function() {
+          oldColor = this.style.background;
+          this.style.background = " green";
+        };
+        oTable.tBodies[0].rows[i].onmouseout = function() {
+          this.style.background = oldColor;
+        };
+        if (i % 2) {
+          oTable.tBodies[0].rows[i].style.background = "";
+        } else {
+          oTable.tBodies[0].rows[i].style.background = "#ccc";
+        }
+      }
+      oBtn.onclick = function() {
+        var oTr = document.createElement("tr");
+        var oTd = document.createElement("td");
+        oTd.innerHTML = id++;
+        oTr.appendChild(oTd);
+        var oTd = document.createElement("td");
+        oTd.innerHTML = oName.value;
+        oTr.appendChild(oTd);
+        var oTd = document.createElement("td");
+        oTd.innerHTML = oAge.value;
+        oTr.appendChild(oTd);
+        var oTd = document.createElement("td");
+        oTd.innerHTML = '<a href="JavaScript:;"> 删除</>';
+        oTr.appendChild(oTd);
+        //删除
+        oTd.getElementsByTagName("a")[0].onclick = function() {
+          oTable.tBodies[0].removeChild(this.parentNode.parentNode);
+        };
+        oTable.tBodies[0].appendChild(oTr);
+      };
+
+      oBtnS.onclick = function() {
+        // var sta = "dwerdwerfdsdfsdf";
+        // alert(sta.search("dwe"));
+
+        for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+          var sTable = oTable.tBodies[0].rows[i].cells[1].innerHTML;
+          var sTxt = oTxtS.value;
+          if (sTable.toLowerCase() == sTxt.toLowerCase()) {
+            oTable.tBodies[0].rows[i].style.background = "yellow";
+          } else {
+            oTable.tBodies[0].rows[i].style.background = "";
+          }
+        }
+      };
+      oBtnSs.onclick = function() {
+        // var sta = "dwerdwerfdsdfsdf";
+        // alert(sta.search("dwe"));
+
+        for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+          var sTable = oTable.tBodies[0].rows[
+            i
+          ].cells[1].innerHTML.toLowerCase();
+          var sTxt = oTxtS.value.toLowerCase();
+          if (sTable.search(sTxt) != -1) {
+            oTable.tBodies[0].rows[i].style.background = "yellow";
+          } else {
+            oTable.tBodies[0].rows[i].style.background = "";
+          }
+        }
+      };
+      oBtnSss.onclick = function() {
+        // var sta = "dwer dwerfd sdfsdf";
+        // var arr = str.split('sta')
+
+        for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+          var sTable = oTable.tBodies[0].rows[
+            i
+          ].cells[1].innerHTML.toLowerCase();
+          var sTxt = oTxtS.value.toLowerCase();
+          var arr = sTxt.split(" ");
+
+          oTable.tBodies[0].rows[i].style.background = "";
+          for (var j = 0; j < arr.length; j++) {
+            if (sTable.search(arr[j]) != -1) {
+              oTable.tBodies[0].rows[i].style.background = "yellow";
+            } else {
+              oTable.tBodies[0].rows[i].style.background = "";
+            }
+          }
+        }
+      };
+
+      oBtnSsss.onclick = function() {
+        // var sta = "dwer dwerfd sdfsdf";
+        // var arr = str.split('sta')
+
+        for (var i = 0; i < oTable.tBodies[0].rows.length; i++) {
+          var sTable = oTable.tBodies[0].rows[
+            i
+          ].cells[1].innerHTML.toLowerCase();
+          var sTxt = oTxtS.value.toLowerCase();
+          var arr = sTxt.split(" ");
+
+          oTable.tBodies[0].rows[i].style.display = "none";
+          for (var j = 0; j < arr.length; j++) {
+            if (sTable.search(arr[j]) != -1) {
+              oTable.tBodies[0].rows[i].style.display = "";
+            } else {
+              oTable.tBodies[0].rows[i].style.display = "none";
+            }
+          }
+        }
+      };
+    };
+  </script>
+
+  <body>
+    <div class="box-wapper">
+      <input type="text" value="姓名" id="name" />
+      <input type="text" value="年龄" id="age" />
+      <input type="button" value="添加" id="btn13" />
+    </div>
+    <div class="box-wapper">
+      <input type="text" value="搜索关键词" id="name2" />
+
+      <input type="button" value="搜索" id="btn13s" />
+      <input type="button" value="模糊搜索" id="btn13ss" />
+      <input type="button" value="多词搜索" id="btn13sss" />
+      <input type="button" value="筛选搜索" id="btn13ssss" />
+    </div>
+    <table id="table13">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>blue</td>
+          <td>23</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>red</td>
+          <td>22</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>green</td>
+          <td>33</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>blua</td>
+          <td>33</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Dom</title>
+    <link rel="stylesheet" href="css.css" id="lina" />
+  </head>
+
+  <script type="text/javascript">
+    //表格
+    //tBodies, tHead, tFoot, rows ,cells
+    //表单
+
+    window.onload = function() {
+      var oUla = document.getElementById("ul14a");
+      var oUlb = document.getElementById("ul14b");
+      var oTab = document.getElementById("table14");
+      var oBtn = document.getElementById("btn14");
+      // oBtn.onclick = function(){
+      //   var oLi = oUla.children[0];
+      //   oUla.appendChild(oLi)
+      // }
+
+
+       oBtn.onclick = function(){
+          
+       }
+    };
+  </script>
+
+  <body>
+   
+    <div class="box-wapper">
+      <input type="button" value="排序" id = "btn14" />
+    </div>
+
+    <ul id="ul14a">
+      <li>21</li>
+      <li>32</li>
+      <li>34</li>
+      <li>54</li>
+    </ul>
+    <!-- <ul id="ul14b">
+      
+    </ul> -->
+    <table id="table14">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>姓名</th>
+          <th>年龄</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>blue</td>
+          <td>23</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>red</td>
+          <td>22</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>green</td>
+          <td>33</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>blua</td>
+          <td>33</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

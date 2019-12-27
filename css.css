@@ -1,3 +1,21 @@
-li{ float:left;}
+
 
 #ul1 li{ width: 100px; float: none }
+
+
+.box-wapper{border: 1px solid #ccc; width: 300px;padding: 30px; margin-bottom: 30px;}
+
+.red {
+  width: 200px;
+  height: 20px;
+  background: red;
+}
+
+.green {
+  width: 200px;
+  height: 20px;
+  background: green;
+}
+
+table{ border-collapse: collapse}
+table td,table th{ border: 1px solid #ddd;min-width: 80px;}
