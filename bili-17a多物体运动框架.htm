@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>多物体运动框架</title>
+    <link rel="stylesheet" href="css.css" id="lina" />
+  </head>
+  <style>
+    .s {
+      width: 100px;
+      height: 20px;
+      background: red;
+      margin: 10px;
+    }
+    .s2 {
+      width: 100px;
+      height: 30px;
+      background: orange;
+      margin: 20px;
+      filter: alpha(opacity= 30);
+      opacity: 0.3;
+      float: left;
+    }
+  </style>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      var aDiv1 = document.getElementsByClassName("s");
+      var aDiv2 = document.getElementsByClassName("s2");
+      for (var i = 0; i < aDiv1.length; i++) {
+        aDiv1[i].timer = null;
+        aDiv1[i].onmouseover = function() {
+          startMove(this, 400);
+        };
+        aDiv1[i].onmouseout = function() {
+          startMove(this, 100);
+        };
+      }
+      for (var i = 0; i < aDiv2.length; i++) {
+        aDiv2[i].timer = null;
+        aDiv2[i].alpha = 30;
+        aDiv2[i].onmouseover = function() {
+          startMove2(this, 100);
+        };
+        aDiv2[i].onmouseout = function() {
+          startMove2(this, 30);
+        };
+      }
+      var oDiv = document.getElementById("div17a");
+    };
+    //var timer = null;
+
+    function startMove(obj, iTatger) {
+      var aDiv1 = document.getElementsByClassName("s");
+      clearInterval(obj.timer);
+      obj.timer = setInterval(function() {
+        var speed = (iTatger - obj.offsetWidth) / 6;
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        if (obj.offsetWidth == iTatger) {
+          clearInterval(obj.timer);
+        } else {
+          obj.style.width = obj.offsetWidth + speed + "px";
+        }
+      }, 30);
+    }
+    //var alpha = 30;
+    function startMove2(obj, iTatger) {
+      var aDiv2 = document.getElementsByClassName("s2");
+      clearInterval(obj.timer);
+      obj.timer = setInterval(function() {
+        var speed = (iTatger - obj.alpha) / 6;
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+        if (obj.alpha == iTatger) {
+          clearInterval(obj.timer);
+        } else {
+          obj.alpha += speed;
+          obj.style.filter = " alpha(opacity = " + obj.alpha + ")";
+          obj.style.opacity = obj.alpha / 100;
+        }
+      }, 30);
+    }
+  </script>
+
+  <body>
+    <div class="s"></div>
+    <div class="s"></div>
+    <div class="s"></div>
+    <div class="s"></div>
+
+    <div class="s2"></div>
+    <div class="s2"></div>
+    <div class="s2"></div>
+    <div class="s2"></div>
+
+    <div id="div17a"></div>
+  </body>
+</html>
