@@ -1,9 +1,14 @@
+#ul1 li {
+  width: 100px;
+  float: none;
+}
 
-
-#ul1 li{ width: 100px; float: none }
-
-
-.box-wapper{border: 1px solid #ccc; width: 300px;padding: 30px; margin-bottom: 30px;}
+.box-wapper {
+  border: 1px solid #ccc;
+  width: 300px;
+  padding: 30px;
+  margin-bottom: 30px;
+}
 
 .red {
   width: 200px;
@@ -17,32 +22,53 @@
   background: green;
 }
 
-table{ border-collapse: collapse}
-table td,table th{ border: 1px solid #ddd;min-width: 80px;}
+table {
+  border-collapse: collapse;
+}
+table td,
+table th {
+  border: 1px solid #ddd;
+  min-width: 80px;
+}
 
-
-#div15{
+#div15 {
   width: 150px;
   height: 200px;
   background: green;
   position: absolute;
   left: -150px;
 }
-#div15 span{
+#div15 span {
   position: absolute;
   width: 200px;
   height: 60px;
   line-height: 20px;
   background: blue;
   right: -20px;
-  top:70px;
-
+  top: 70px;
 }
 
-#div15b{
+#div15b {
   width: 200px;
   height: 200px;
   background: red;
- filter: opacity(30);
- opacity: 0.3;
+  filter: opacity(30);
+  opacity: 0.3;
+}
+
+#div16 {
+  width: 150px;
+  height: 100px;
+  background: red;
+  position: absolute;
+  left: 0;
+  left: 50px;
+}
+#div16c {
+  width: 100px;
+  height: 150px;
+  background: red;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
