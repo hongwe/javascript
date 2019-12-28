@@ -19,3 +19,30 @@
 
 table{ border-collapse: collapse}
 table td,table th{ border: 1px solid #ddd;min-width: 80px;}
+
+
+#div15{
+  width: 150px;
+  height: 200px;
+  background: green;
+  position: absolute;
+  left: -150px;
+}
+#div15 span{
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  line-height: 20px;
+  background: blue;
+  right: -20px;
+  top:70px;
+
+}
+
+#div15b{
+  width: 200px;
+  height: 200px;
+  background: red;
+ filter: opacity(30);
+ opacity: 0.3;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>运动</title>
+    <link rel="stylesheet" href="css.css" id="lina" />
+  </head>
+
+  <script type="text/javascript">
+    window.onload = function() {
+      var oDiv = document.getElementById("div15");
+
+      oDiv.onmouseover = function() {
+        //startMove(10,0);
+        startMove(0);
+      };
+      oDiv.onmouseout = function() {
+        // startMove2(); 
+        //startMove(-10,-150);
+        startMove(-150);
+      };
+      var timer = null;
+
+      //1个参数
+      function startMove(iTatger) {
+        clearInterval(timer);
+        timer = setInterval(function() {
+          var speed = 0;
+          if (oDiv.offsetLeft > iTatger) {
+            speed = -10;
+          } else {
+            speed = 10;
+          }
+          if (oDiv.offsetLeft == iTatger) {
+            clearInterval(timer);
+          } else {
+            oDiv.style.left = oDiv.offsetLeft + speed + "px";
+          }
+        }, 30);
+      }
+
+      //两个参数
+      //   function startMove(speed, iTatger) {
+      //     clearInterval(timer);
+      //     timer = setInterval(function() {
+      //       if (oDiv.offsetLeft == iTatger) {
+      //         clearInterval(timer);
+      //       } else {
+      //         oDiv.style.left = oDiv.offsetLeft + speed + "px";
+      //       }
+      //     }, 30);
+      //   }
+
+      //   function startMove2() {
+      //     clearInterval(timer);
+      //     timer = setInterval(function() {
+      //       if (oDiv.offsetLeft == -150) {
+      //         clearInterval(timer);
+      //       } else {
+      //         oDiv.style.left = oDiv.offsetLeft - 10 + "px";
+      //       }
+      //     }, 30);
+      //   }
+    };
+  </script>
+
+  <body>
+    <div id="div15">
+      <span>分享到</span>
+    </div>
+  </body>
+</html>
