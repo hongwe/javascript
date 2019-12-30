@@ -1,117 +1,110 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title></title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
+    <style type="text/css">
+        #div1,
+        #div2,
+        #div3 {
+        }
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <link rel="stylesheet" href="css.css" id='lina'>
-</head>
-<style type="text/css">
-#div1,
-#div2,
-#div3 {}
+        .red {
+            width: 200px;
+            height: 100px;
+            background: red;
+        }
 
-.red {
-    width: 200px;
-    height: 100px;
-    background: red;
-}
+        .green {
+            width: 200px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+    <script type="text/javascript">
+        function toGreen() {
+            var div1 = document.getElementById("div1");
+            div1.style.width = "200px";
+            div1.style.height = "100px";
+            div1.style.background = "green";
+        }
 
-.green {
-    width: 200px;
-    height: 100px;
-    background: green;
-}
-</style>
-<script type="text/javascript">
+        function toRed() {
+            var div1 = document.getElementById("div1");
+            div1.style.width = "200px";
+            div1.style.height = "100px";
+            div1.style.background = "red";
+        }
 
-  function toGreen() {
-        var div1 = document.getElementById('div1');
-        div1.style.width = "200px";
-        div1.style.height = "100px";
-        div1.style.background = "green";
-    }
+        function toBlack() {
+            var div1 = document.getElementById("div1");
+            div1.style.width = "200px";
+            div1.style.height = "100px";
+            div1.style.background = "black";
+        }
+        //传参
+        function show(e) {
+            var div1 = document.getElementById("div1");
+            div1.style.width = "200px";
+            div1.style.height = "100px";
+            div1.style.background = e;
+        }
 
-    function toRed() {
-        var div1 = document.getElementById('div1');
-        div1.style.width = "200px";
-        div1.style.height = "100px";
-        div1.style.background = "red";
-    }
+        function showB(w, h, b) {
+            var div2 = document.getElementById("div2");
+            div2.style.width = w + "px";
+            div2.style.height = h + "px";
+            div2.style.background = b;
+        }
 
-    function toBlack() {
-        var div1 = document.getElementById('div1');
-        div1.style.width = "200px";
-        div1.style.height = "100px";
-        div1.style.background = "black";
-    }
-    //传参
-    function show(e) {
-        var div1 = document.getElementById('div1');
-        div1.style.width = "200px";
-        div1.style.height = "100px";
-        div1.style.background = e;
-    }
+        function showB(w, h, b) {
+            var div2 = document.getElementById("div2");
+            div2.style.width = w + "px";
+            div2.style.height = h + "px";
+            div2.style.background = b;
+        }
 
-    function showB(w, h, b) {
-        var div2 = document.getElementById('div2');
-        div2.style.width = w + "px";
-        div2.style.height = h + "px";
-        div2.style.background = b;
-    }
+        function showC(name, value) {
+            var div2 = document.getElementById("div2");
+            div2.style[name] = value;
+        }
 
-    function showB(w, h, b) {
-        var div2 = document.getElementById('div2');
-        div2.style.width = w + "px";
-        div2.style.height = h + "px";
-        div2.style.background = b;
-    }
+        function showD(e) {
+            var div3 = document.getElementById("div3");
+            div3.className = e;
+        }
 
+        // window.onload() = function() {
 
-    function showC(name, value) {
-        var div2 = document.getElementById('div2');
-        div2.style[name] = value;
-    }
+        var inputGroup = document.getElementsByTagName("input");
+        console.log(inputGroup[0]);
+        for (var i = 0; i < inputGroup.length; i++) {
+            inputGroup[i].className = red;
+        }
+        // }
+    </script>
 
-    function showD(e) {
-        var div3 = document.getElementById('div3');
-        div3.className = e;
-    }
-
-   
-
-
-// window.onload() = function() {
-  
-
-    var inputGroup = document.getElementsByTagName('input')
-    console.log(inputGroup[0])
-    for (var i = 0; i < inputGroup.length; i++) {
-    	inputGroup[i].className = red;
-    }
-// }
-</script>
-
-<body>
-    <button type="button" onclick="toBlack()">黑</button>
-    <button type="button" onclick="toRed()">红</button>
-    <button type="button" onclick="toGreen()">绿</button>
-    <button type="button" onclick="show('black')">黑</button>
-    <button type="button" onclick="show('red')">红</button>
-    <button type="button" onclick="show('green')">绿</button>
-    <div id="div1"></div>
-    <button type="button" onclick="showB('200','100','#999222')">宽</button>
-    <button type="button" onclick="showC('width','200px')">高</button>
-    <div id="div2"></div>
-    <button type="button" onclick="showD('green')">绿</button>
-    <button type="button" onclick="showD('red')">绿</button>
-    <div id="div3"></div>
-    <input type="button" value="1">
-    <input type="button" value="2">
-    <input type="button" value="3">
-    <input type="button" value="4">
-    <input type="button" value="5">
-</body>
-
+    <body>
+        <button type="button" onclick="toBlack()">黑</button>
+        <button type="button" onclick="toRed()">红</button>
+        <button type="button" onclick="toGreen()">绿</button>
+        <button type="button" onclick="show('black')">黑</button>
+        <button type="button" onclick="show('red')">红</button>
+        <button type="button" onclick="show('green')">绿</button>
+        <div id="div1"></div>
+        <button type="button" onclick="showB('200','100','#999222')">宽</button>
+        <button type="button" onclick="showC('width','200px')">高</button>
+        <div id="div2"></div>
+        <button type="button" onclick="showD('green')">绿</button>
+        <button type="button" onclick="showD('red')">绿</button>
+        <div id="div3"></div>
+        <input type="button" value="1" />
+        <input type="button" value="2" />
+        <input type="button" value="3" />
+        <input type="button" value="4" />
+        <input type="button" value="5" />
+    </body>
 </html>

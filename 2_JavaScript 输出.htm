@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <script src="myScript.js"></script>
+    </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
-  <script src="myScript.js"></script>
-</head>
+    <body>
+        <p>window.alert()</p>
+        <script>
+            window.alert(5 + 6);
+        </script>
+        <p>document.write()</p>
+        <p id="demo">我的第一个段落</p>
+        <script>
+            document.getElementById("demo").innerHTML = "段落已修改。";
+        </script>
+        <script>
+            document.write(Date());
+        </script>
+        <p>innerHTML</p>
 
-<body>
-  <p>window.alert()</p>
-  <script>
-    window.alert(5 + 6);
-  </script>
-  <p>document.write()</p>
-  <p id="demo">我的第一个段落</p>
-  <script>
-    document.getElementById("demo").innerHTML = "段落已修改。";
-  </script>
-  <script>
-    document.write(Date());
-  </script>
-  <p>innerHTML</p>
-
-
-  <h1>我的第一个 Web 页面</h1>
-  <p>我的第一个段落。</p>
-  <button onclick="myFunction()">点我</button>
-  <script>
-    function myFunction() {
-      document.write(Date());
-    }
-  </script>
-  <p>console.log()</p>
-  <script>
-      a = 5;
-      b = 6;
-      c = a + b;
-      console.log(c);
-      </script>
-
-
-</body>
-
+        <h1>我的第一个 Web 页面</h1>
+        <p>我的第一个段落。</p>
+        <button onclick="myFunction()">点我</button>
+        <script>
+            function myFunction() {
+                document.write(Date());
+            }
+        </script>
+        <p>console.log()</p>
+        <script>
+            a = 5;
+            b = 6;
+            c = a + b;
+            console.log(c);
+        </script>
+    </body>
 </html>

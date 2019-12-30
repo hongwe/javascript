@@ -1,126 +1,126 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>6</title>
-    <link rel="stylesheet" href="css.css" id="lina" />
-  </head>
-  <style type="text/css">
-    .red {
-      width: 200px;
-      height: 100px;
-      background: red;
-    }
-
-    .green {
-      width: 200px;
-      height: 100px;
-      background: green;
-    }
-  </style>
-  <script type="text/javascript">
-    // 知识点
-    // typeof
-    // parseInt
-    // parseFloat
-
-    // var a = "sdfsdfsd";
-    // document.write(a);
-    // document.write(typeof a);
-
-    // var b = "123456";
-    // document.write(b);
-    // document.write(typeof b);
-
-    // var b1 = "123456pc789";
-    // var b2 = "pc789";
-    // document.write(b1);
-    // document.write(typeof b1);
-    // document.write(parseInt(b1) );
-    // document.write(parseInt(b2) );
-    // document.write(Number(b1) );
-    // document.write(Number(b2) );
-
-    // var c = 123456;
-    // document.write(c);
-    // document.write(typeof c);
-
-    // var d = true;
-    // document.write(d);
-    // document.write(typeof d);
-
-    // var e = function() {};
-    // document.write(e);
-    // document.write(typeof e);
-
-    // var f;
-    // document.write(f);
-    // document.write(typeof f);
-
-    var a1 = parseInt("abc");
-    document.write(a1);
-    document.write(typeof a1);
-    window.onload = function() {
-      var txt1 = document.getElementById("txt1");
-      var txt2 = document.getElementById("txt2");
-      var btn1 = document.getElementById("btn1");
-      btn1.onclick = function() {
-        // var sum='';
-        // var sum2='';
-        //  sum = Number(txt1.value) + Number(txt2.value)
-        //  sum2 = parseInt(txt1.value) + parseInt(txt2.value)
-        //  document.write(typeof txt1.value);
-        //  document.write(typeof txt2.value);
-        //  document.write(sum);
-        //  document.write(sum2);
-
-        //改进
-        var n1 = parseInt(txt1.value);
-        var n2 = parseInt(txt2.value);
-        if (isNaN(n1)) {
-          document.write("输入错误,第一个不是数字");
-        } else if (isNaN(n2)) {
-          document.write("输入错误,第二个不是数字");
-        } else {
-          document.write(n1 + n2);
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>6</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
+    <style type="text/css">
+        .red {
+            width: 200px;
+            height: 100px;
+            background: red;
         }
-      };
 
-      var aa = 5;
-      var bb = "5";
-      // document.write(aa = bb);
-      // document.write(aa == bb);
-      // document.write(aa === bb);
-      // document.write(aa + bb);  //加号两种用途 1.字符串连接 2.数字相加
-      // document.write(aa - bb);   //减号1种用途 1.数字相减
-    };
+        .green {
+            width: 200px;
+            height: 100px;
+            background: green;
+        }
+    </style>
+    <script type="text/javascript">
+        // 知识点
+        // typeof
+        // parseInt
+        // parseFloat
 
-    //作用域//闭包
-    // function aaa(){
-    //   var a=12
-    // }
-    // function bbb(){
-    //   document.write(a);
-    // }
+        // var a = "sdfsdfsd";
+        // document.write(a);
+        // document.write(typeof a);
 
-    //闭包
-    function aaa() {
-      var a = 12;
-      function bbb() {
-        document.write(a);
-      }
-    };
-    //变量命名  类型前缀+首字母大写
-    //类型前缀
-    // 数组a 布尔值 b 浮点f 函数fn 整数 i 对象0 正则re 字符串s 变体变量v
-</script>
+        // var b = "123456";
+        // document.write(b);
+        // document.write(typeof b);
 
-  <body>
-    <input type="text" id="txt1" />
-    <input type="text" id="txt2" />
-    <input type="button" id="btn1" value="求和" />
+        // var b1 = "123456pc789";
+        // var b2 = "pc789";
+        // document.write(b1);
+        // document.write(typeof b1);
+        // document.write(parseInt(b1) );
+        // document.write(parseInt(b2) );
+        // document.write(Number(b1) );
+        // document.write(Number(b2) );
 
-    <input type="button" id="btn2" value="aaa" onclick="aaa()" />
-  </body>
+        // var c = 123456;
+        // document.write(c);
+        // document.write(typeof c);
+
+        // var d = true;
+        // document.write(d);
+        // document.write(typeof d);
+
+        // var e = function() {};
+        // document.write(e);
+        // document.write(typeof e);
+
+        // var f;
+        // document.write(f);
+        // document.write(typeof f);
+
+        var a1 = parseInt("abc");
+        document.write(a1);
+        document.write(typeof a1);
+        window.onload = function() {
+            var txt1 = document.getElementById("txt1");
+            var txt2 = document.getElementById("txt2");
+            var btn1 = document.getElementById("btn1");
+            btn1.onclick = function() {
+                // var sum='';
+                // var sum2='';
+                //  sum = Number(txt1.value) + Number(txt2.value)
+                //  sum2 = parseInt(txt1.value) + parseInt(txt2.value)
+                //  document.write(typeof txt1.value);
+                //  document.write(typeof txt2.value);
+                //  document.write(sum);
+                //  document.write(sum2);
+
+                //改进
+                var n1 = parseInt(txt1.value);
+                var n2 = parseInt(txt2.value);
+                if (isNaN(n1)) {
+                    document.write("输入错误,第一个不是数字");
+                } else if (isNaN(n2)) {
+                    document.write("输入错误,第二个不是数字");
+                } else {
+                    document.write(n1 + n2);
+                }
+            };
+
+            var aa = 5;
+            var bb = "5";
+            // document.write(aa = bb);
+            // document.write(aa == bb);
+            // document.write(aa === bb);
+            // document.write(aa + bb);  //加号两种用途 1.字符串连接 2.数字相加
+            // document.write(aa - bb);   //减号1种用途 1.数字相减
+        };
+
+        //作用域//闭包
+        // function aaa(){
+        //   var a=12
+        // }
+        // function bbb(){
+        //   document.write(a);
+        // }
+
+        //闭包
+        function aaa() {
+            var a = 12;
+            function bbb() {
+                document.write(a);
+            }
+        }
+        //变量命名  类型前缀+首字母大写
+        //类型前缀
+        // 数组a 布尔值 b 浮点f 函数fn 整数 i 对象0 正则re 字符串s 变体变量v
+    </script>
+
+    <body>
+        <input type="text" id="txt1" />
+        <input type="text" id="txt2" />
+        <input type="button" id="btn1" value="求和" />
+
+        <input type="button" id="btn2" value="aaa" onclick="aaa()" />
+    </body>
 </html>

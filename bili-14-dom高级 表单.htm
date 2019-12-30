@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>表单</title>
-    <link rel="stylesheet" href="css.css" id="lina" />
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>表单</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
 
-  <script type="text/javascript">
-    //表格
-    //tBodies, tHead, tFoot, rows ,cells
-    //表单
+    <script type="text/javascript">
+        //表格
+        //tBodies, tHead, tFoot, rows ,cells
+        //表单
 
-    window.onload = function() {
-      var oForm = document.getElementById("form14");
+        window.onload = function() {
+            var oForm = document.getElementById("form14");
 
-      oForm.onsubmit = function() {
-          alert('aaa')
-      };
-      oForm.onreset = function() {
-          alert('bbb')
-      };
-    };
-  </script>
+            oForm.onsubmit = function() {
+                alert("aaa");
+            };
+            oForm.onreset = function() {
+                alert("bbb");
+            };
+        };
+    </script>
 
-  <body>
-    <div class="box-wapper">
-      <form action="http://www.zhinengshe.com" id="form14">
-        用户名： <input type="text" name="user" /><br />
-        密码： <input type="password" name="pass" /><br />
-        <input type="submit" />
-        <input type="reset" />
-      </form>
-    </div>
-  </body>
+    <body>
+        <div class="box-wapper">
+            <form action="http://www.zhinengshe.com" id="form14">
+                用户名： <input type="text" name="user" /><br />
+                密码： <input type="password" name="pass" /><br />
+                <input type="submit" />
+                <input type="reset" />
+            </form>
+        </div>
+    </body>
 </html>

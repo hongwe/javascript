@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>运动</title>
-    <link rel="stylesheet" href="css.css" id="lina" />
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>运动</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
 
-  <script type="text/javascript">
-    window.onload = function() {
-      var oDiv = document.getElementById("div15b");
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDiv = document.getElementById("div15b");
 
-      oDiv.onmouseover = function() {
-        startMove(0);
-      };
-      oDiv.onmouseout = function() {
-        startMove(100);
-      };
-      var timer = null;
-      var alpha = 30;
-      //1个参数
-      function startMove(iTatger) {
-        clearInterval(timer);
-        timer = setInterval(function() {
-          var speed = 0;
-          if (alpha < iTatger) {
-            speed = 10;
-          } else {
-            speed = -10;
-          }
-          if (alpha == iTatger) {
-            clearInterval(timer);
-          } else {
-            alpha += speed;
-            oDiv.style.filter = "alpha(opacity:" + alpha + ")";
-            oDiv.style.opacity = alpha / 100;
-          }
-        }, 30);
-      }
-    };
-  </script>
+            oDiv.onmouseover = function() {
+                startMove(0);
+            };
+            oDiv.onmouseout = function() {
+                startMove(100);
+            };
+            var timer = null;
+            var alpha = 30;
+            //1个参数
+            function startMove(iTatger) {
+                clearInterval(timer);
+                timer = setInterval(function() {
+                    var speed = 0;
+                    if (alpha < iTatger) {
+                        speed = 10;
+                    } else {
+                        speed = -10;
+                    }
+                    if (alpha == iTatger) {
+                        clearInterval(timer);
+                    } else {
+                        alpha += speed;
+                        oDiv.style.filter = "alpha(opacity:" + alpha + ")";
+                        oDiv.style.opacity = alpha / 100;
+                    }
+                }, 30);
+            }
+        };
+    </script>
 
-  <body>
-    <div id="div15b"></div>
-  </body>
+    <body>
+        <div id="div15b"></div>
+    </body>
 </html>

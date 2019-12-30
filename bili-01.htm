@@ -1,67 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>b1</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
+    <style type="text/css"></style>
+    <script type="text/javascript">
+        // toGreen toRed
+        function toGreen() {
+            var div1 = document.getElementById("div1");
+            div1.style.width = "200px";
+            div1.style.height = "200px";
+            div1.style.background = "green";
+        }
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>b1</title>
-    <link rel="stylesheet" href="css.css" id='lina'>
-</head>
-<style type="text/css">
-</style>
-<script type="text/javascript">
-// toGreen toRed
-function toGreen() {
-    var div1 = document.getElementById('div1');
-    div1.style.width = "200px";
-    div1.style.height = "200px";
-    div1.style.background = "green";
-}
+        function toRed() {
+            var div1 = document.getElementById("div1");
+            div1.style.width = "200px";
+            div1.style.height = "200px";
+            div1.style.background = "red";
+        }
+        // 换css文件
+        function piA() {
+            var lina = document.getElementById("lina");
+            lina.href = "../css1.css";
+        }
 
-function toRed() {
-    var div1 = document.getElementById('div1');
-    div1.style.width = "200px";
-    div1.style.height = "200px";
-    div1.style.background = "red";
-}
-// 换css文件
-function piA() {
-    var lina = document.getElementById('lina');
-    lina.href = "../css1.css"
-}
+        function piB() {
+            var lina = document.getElementById("lina");
+            lina.href = "../css2.css";
+        }
 
-function piB() {
-    var lina = document.getElementById('lina');
-    lina.href = "../css2.css"
-}
+        function cText() {
+            var show = document.getElementById("div2");
+            text1.value = "../css2.css";
+        }
 
-function cText() {
-    var show = document.getElementById('div2');
-    text1.value = "../css2.css"
-}
+        function showHide() {
+            var sh = document.getElementById("div2");
+            if (sh.style.display == "block") {
+                sh.style.display = "none";
+            } else {
+                sh.style.display = "block";
+            }
+        }
+    </script>
 
-
-function showHide() {
-    var sh = document.getElementById('div2');
-    if (sh.style.display == "block") {
-        sh.style.display = "none";
-    }else{
-        sh.style.display = "block";
-    }
-}
-</script>
-
-<body>
-    <!-- <input type="checkbox" onmouseover="document.getElementById('popdiv').style.display='block'" onmouseout="document.getElementById('popdiv').style.display='none'" /> -->
-    <!-- <div style="display: none" id="popdiv">好的</div> -->
-    <!-- <input type="button" onmouseover="alert('ttt')" /> -->
-    <div id="div1" onmouseover='toGreen()' onmouseout='toRed()'>2</div>
-    <input type="button" name="" value="皮1" onclick="piA()">
-    <input type="button" name="" value="皮2" onclick="piB()">
-    <input type="text" name="" value="aaa" id="wordA" onmouseover='cText()'>
-    <button onclick='showHide()'>显示隐藏</button>
-    <div id="div2">div2</div>
-    <a href="javascript:;">aaa</a>
-</body>
-
+    <body>
+        <!-- <input type="checkbox" onmouseover="document.getElementById('popdiv').style.display='block'" onmouseout="document.getElementById('popdiv').style.display='none'" /> -->
+        <!-- <div style="display: none" id="popdiv">好的</div> -->
+        <!-- <input type="button" onmouseover="alert('ttt')" /> -->
+        <div id="div1" onmouseover="toGreen()" onmouseout="toRed()">2</div>
+        <input type="button" name="" value="皮1" onclick="piA()" />
+        <input type="button" name="" value="皮2" onclick="piB()" />
+        <input
+            type="text"
+            name=""
+            value="aaa"
+            id="wordA"
+            onmouseover="cText()"
+        />
+        <button onclick="showHide()">显示隐藏</button>
+        <div id="div2">div2</div>
+        <a href="javascript:;">aaa</a>
+    </body>
 </html>

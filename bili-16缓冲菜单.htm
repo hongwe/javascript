@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>运动</title>
-    <link rel="stylesheet" href="css.css" id="lina" />
-  </head>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>运动</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
 
-  <script type="text/javascript">
-    //bug 速度取整
+    <script type="text/javascript">
+        //bug 速度取整
 
-    window.onload = function() {
-      var oDiv = document.getElementById("div16c");
+        window.onload = function() {
+            var oDiv = document.getElementById("div16c");
 
-      var scrollTop =
-        document.documentElement.scrollTop || document.body.scrollTop;
-      //   oDiv.style.top =
-      //     document.documentElement.clientHeight -
-      //     oDiv.offsetHeight +
-      //     scrollTop +
-      //     "px";
+            var scrollTop =
+                document.documentElement.scrollTop || document.body.scrollTop;
+            //   oDiv.style.top =
+            //     document.documentElement.clientHeight -
+            //     oDiv.offsetHeight +
+            //     scrollTop +
+            //     "px";
 
-      startMove(
-        parseInt(
-          (document.documentElement.clientHeight - oDiv.offsetHeight) / 2 +
-            scrollTop
-        )
-      );
-    };
-    var timer = null;
+            startMove(
+                parseInt(
+                    (document.documentElement.clientHeight -
+                        oDiv.offsetHeight) /
+                        2 +
+                        scrollTop
+                )
+            );
+        };
+        var timer = null;
 
-    function startMove(iTatger) {
-      var oDiv = document.getElementById("div16c");
-      clearInterval(timer);
-      timer = setInterval(function() {
-        var speed = (iTatger - oDiv.offsetTop) / 6;
-        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
-        //   if (oDiv.offsetTop > iTatger) {
-        //     speed = -10;
-        //   } else {
-        //     speed = 10;
-        //   }
-        if (oDiv.offsetTop == iTatger) {
-          clearInterval(timer);
-        } else {
-          oDiv.style.top = oDiv.offsetTop + speed + "px";
+        function startMove(iTatger) {
+            var oDiv = document.getElementById("div16c");
+            clearInterval(timer);
+            timer = setInterval(function() {
+                var speed = (iTatger - oDiv.offsetTop) / 6;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                //   if (oDiv.offsetTop > iTatger) {
+                //     speed = -10;
+                //   } else {
+                //     speed = 10;
+                //   }
+                if (oDiv.offsetTop == iTatger) {
+                    clearInterval(timer);
+                } else {
+                    oDiv.style.top = oDiv.offsetTop + speed + "px";
+                }
+            }, 30);
         }
-      }, 30);
-    }
 
-    //math.ceil(-9.8)
-    //math.floor(4.99)
-    //math.abs(4.99) 绝对值
-  </script>
+        //math.ceil(-9.8)
+        //math.floor(4.99)
+        //math.abs(4.99) 绝对值
+    </script>
 
-  <body style="height:500px">
-    <div id="div16c"></div>
-  </body>
+    <body style="height:500px">
+        <div id="div16c"></div>
+    </body>
 </html>

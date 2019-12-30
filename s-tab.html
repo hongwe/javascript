@@ -1,62 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <style>
-      div {
-        width: 200px;
-        height: 100px;
-        background: #fff;
-        margin: 10px;
-      }
-      .aaa {
-        background: #f00;
-      }
-      .page{display: none; border: 1px solid #000;}
-      .active{ background-color: #f00;}
-    </style>
-    <script>
-      window.onload = function() {
-        var oDiv = document.getElementById("div1");
-        var aBtn = oDiv.getElementsByTagName("input");
-        var aDiv = oDiv.getElementsByTagName("div");
-     
-        for(var i=0; i< aBtn.length; i++)
-        {
-            
-            
-            aBtn[i].index = i
-            aBtn[i].onclick = function(){
-                for(var i=0; i< aBtn.length; i++){
-                    aBtn[i].className = ""
-                    aDiv[i].style = "none"
-                }
-                this.className = "active"
-                aDiv[this.index].style.display="block"
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <style>
+            div {
+                width: 200px;
+                height: 100px;
+                background: #fff;
+                margin: 10px;
             }
-            
-            aBtn.className=''; 
-        }
-        
-      };
-    </script>
-  </head>
-  <body>
-    <div id="div1">
-        <input type="button" value="tab1">
-        <input type="button" value="tab2">
-        <input type="button" value="tab3">
-        <input type="button" value="tab4">
-   
-    <div class="page" style="display: block;">111</div>
-    <div class="page">222</div>
-    <div class="page">333</div>
-    <div class="page">444</div>
-</div>
+            .aaa {
+                background: #f00;
+            }
+            .page {
+                display: none;
+                border: 1px solid #000;
+            }
+            .active {
+                background-color: #f00;
+            }
+        </style>
+        <script>
+            window.onload = function() {
+                var oDiv = document.getElementById("div1");
+                var aBtn = oDiv.getElementsByTagName("input");
+                var aDiv = oDiv.getElementsByTagName("div");
 
-  
-  </body>
+                for (var i = 0; i < aBtn.length; i++) {
+                    aBtn[i].index = i;
+                    aBtn[i].onclick = function() {
+                        for (var i = 0; i < aBtn.length; i++) {
+                            aBtn[i].className = "";
+                            aDiv[i].style = "none";
+                        }
+                        this.className = "active";
+                        aDiv[this.index].style.display = "block";
+                    };
+
+                    aBtn.className = "";
+                }
+            };
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+            <input type="button" value="tab1" />
+            <input type="button" value="tab2" />
+            <input type="button" value="tab3" />
+            <input type="button" value="tab4" />
+
+            <div class="page" style="display: block;">111</div>
+            <div class="page">222</div>
+            <div class="page">333</div>
+            <div class="page">444</div>
+        </div>
+    </body>
 </html>

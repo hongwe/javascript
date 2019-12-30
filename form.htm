@@ -1,68 +1,60 @@
 <html>
-  <head>
-    <title>表单标签学习</title>
-    <meta charset="UTF-8" />
-    <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
-  </head>
-  <!--
-		HTML收集用户数据：
-			问题1：收集到的数据提交给谁？怎么提交？
-			问题2：如何在网页中提示用户进行数据的书写?
-			解决1：使用form标签
-					表单标签学习:form
-						作用：声明收集到的用户数据提交给哪个服务器，并使用哪种方式进行提交
-						属性：
-							action：值为数据要提交的服务器的URL地址
-							method：数据提交的方式
-								get:
-										收集到的数据以？隔开拼接在action的URL后面
-										每条数据都是以键值对的形式体现的，其中键位表单域标签name属性的值，值为用户书写数据
-										不同的键值对使用&符号隔开。
-										注意：
-											name属性值不能为空，否则该表单域标签收集的数据不会被提交。
-										get提交方式不安全，适合小量数据的收集，效率高。
-								post:
-									收集的数据是单独进行流提交的，普通用户是无法查看的。
-									安全，数据量大，效率低。
-	-->
-  <body>
-    <h3>表单标签学习</h3>
-    <hr />
-    <form action="#" method="post">
-      用户名:<input type="text" name="uname" id="uname" value="" /><br />
-      密码:<input type="password" name="pwd" id="pwd" value="" /><br />
-      
-    </form>
-    <input type="submit" name="" id="" value="提交" onclick="testAjax()" />
-  </body>
+    <head>
+        <title>表单标签学习</title>
+        <meta charset="UTF-8" />
+        <script src="jquery-1.9.1.min.js" type="text/javascript"></script>
+    </head>
 
-  <script>
-    function testAjax() {
-      var users = [
-        { name: "张三", age: "21", birth: "1994-12-12" },
-        { name: "李四", age: "20", birth: "1995-12-11" },
-        { name: "wangwu", age: "20", birth: "1995-12-11" }
-      ];
+    <!-- HTML收集用户数据： 问题1：收集到的数据提交给谁？怎么提交？
+    问题2：如何在网页中提示用户进行数据的书写? 解决1：使用form标签
+    表单标签学习:form
+    作用：声明收集到的用户数据提交给哪个服务器，并使用哪种方式进行提交 属性：
+    action：值为数据要提交的服务器的URL地址 method：数据提交的方式 get:
+    收集到的数据以？隔开拼接在action的URL后面
+    每条数据都是以键值对的形式体现的，其中键位表单域标签name属性的值，值为用户书写数据
+    不同的键值对使用&符号隔开。 注意：
+    name属性值不能为空，否则该表单域标签收集的数据不会被提交。
+    get提交方式不安全，适合小量数据的收集，效率高。 post:
+    收集的数据是单独进行流提交的，普通用户是无法查看的。
+    安全，数据量大，效率低。 -->
 
-      $.ajax({
-        type: "POST",
+    <body>
+        <h3>表单标签学习</h3>
+        <hr />
+        <form action="#" method="post">
+            用户名:<input type="text" name="uname" id="uname" value="" /><br />
+            密码:<input type="password" name="pwd" id="pwd" value="" /><br />
+        </form>
+        <input type="submit" name="" id="" value="提交" onclick="testAjax()" />
+    </body>
 
-        data: JSON.stringify(users),
+    <script>
+        function testAjax() {
+            var users = [
+                { name: "张三", age: "21", birth: "1994-12-12" },
+                { name: "李四", age: "20", birth: "1995-12-11" },
+                { name: "wangwu", age: "20", birth: "1995-12-11" }
+            ];
 
-        contentType: "application/json",
+            $.ajax({
+                type: "POST",
 
-        dataType: "json",
+                data: JSON.stringify(users),
 
-        url: "rili.html",
+                contentType: "application/json",
 
-        success: function(data) {
-          alert("OK");
-        },
+                dataType: "json",
 
-        error: function(e) {
-          alert("error");
+                url: "rili.html",
+
+                success: function(data) {
+                    alert("OK");
+                },
+
+                error: function(e) {
+                    alert("error");
+                }
+            });
         }
-      });
-    }
-  </script>
+    </script>
 </html>

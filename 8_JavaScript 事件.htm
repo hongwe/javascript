@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
-    <!-- <script src="myScript.js"></script> -->
-    <style>
-      h1 {
-        font-size: 30px;
-      }
-      h2 {
-        font-size: 24px;
-        text-indent: 2em;
-      }
-      h3 {
-        font-size: 16px;
-        text-indent: 4em;
-      }
-      h4 {
-        font-size: 16px;
-        color: red;
-        text-indent: 4em;
-      }
-      .example_code {
-        line-height: 1.4em;
-        width: 98%;
-        background-color: #fff;
-        padding: 5px;
-        border: 1px solid #d4d4d4;
-        font-size: 110%;
-        font-family: Menlo, Monaco, Consolas, "Andale Mono", "lucida console",
-          "Courier New", monospace;
-        word-break: break-all;
-        word-wrap: break-word;
-      }
-    </style>
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+        <!-- <script src="myScript.js"></script> -->
+        <style>
+            h1 {
+                font-size: 30px;
+            }
+            h2 {
+                font-size: 24px;
+                text-indent: 2em;
+            }
+            h3 {
+                font-size: 16px;
+                text-indent: 4em;
+            }
+            h4 {
+                font-size: 16px;
+                color: red;
+                text-indent: 4em;
+            }
+            .example_code {
+                line-height: 1.4em;
+                width: 98%;
+                background-color: #fff;
+                padding: 5px;
+                border: 1px solid #d4d4d4;
+                font-size: 110%;
+                font-family: Menlo, Monaco, Consolas, "Andale Mono",
+                    "lucida console", "Courier New", monospace;
+                word-break: break-all;
+                word-wrap: break-word;
+            }
+        </style>
+    </head>
 
-  <body>
-      some-HTML-element some-event='JavaScript 代码'
-<button onclick="getElementById('demo').innerHTML=Date()">现在的时间是?</button>
-<button onclick="this.innerHTML=Date()">现在的时间是?</button>
-<button onclick="displayDate()">现在的时间是?</button>
-<script>
-    function displayDate(){
-      document.getElementById("demo").innerHTML=Date();
-    }
-    </script>
-    <p id="demo"></p>
-  </body>
+    <body>
+        some-HTML-element some-event='JavaScript 代码'
+        <button onclick="getElementById('demo').innerHTML=Date()">
+            现在的时间是?
+        </button>
+        <button onclick="this.innerHTML=Date()">现在的时间是?</button>
+        <button onclick="displayDate()">现在的时间是?</button>
+        <script>
+            function displayDate() {
+                document.getElementById("demo").innerHTML = Date();
+            }
+        </script>
+        <p id="demo"></p>
+    </body>
 </html>

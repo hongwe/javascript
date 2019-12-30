@@ -1,52 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-cmn-Hans">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Dom</title>
-    <link rel="stylesheet" href="css.css" id="lina" />
-  </head>
-  <style type="text/css">
-    .red {
-      width: 200px;
-      height: 20px;
-      background: red;
-    }
-
-    .green {
-      width: 200px;
-      height: 20px;
-      background: green;
-    }
-  </style>
-  <script type="text/javascript">
-    //1. 创建dom元素 createElement
-    //appendChild
-    //insertBefore
-
-    window.onload = function() {
-      var oUl = document.getElementById("ul12");
-      var oBtn = document.getElementById("btn12");
-      var oTxt = document.getElementById("txt12");
-      var aLi = oUl.getElementsByTagName("li");
-      oBtn.onclick = function() {
-        var oLi = document.createElement("li");
-        oLi.innerHTML = oTxt.value;
-        //oUl.appendChild(oLi)
-        if ((aLi.length = 0)) {
-          oUl.appendChild(oLi);
-        } else {
-          oUl.insertBefore(oLi, aLi[0]);
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Dom</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
+    <style type="text/css">
+        .red {
+            width: 200px;
+            height: 20px;
+            background: red;
         }
-      };
-    };
-  </script>
 
-  <body>
-    <input type="text" value="创建dom" id="txt12" />
-    <input type="button" value="创建dom" id="btn12" />
-    <ul id="ul12">
-      <li></li>
-    </ul>
-  </body>
+        .green {
+            width: 200px;
+            height: 20px;
+            background: green;
+        }
+    </style>
+    <script type="text/javascript">
+        //1. 创建dom元素 createElement
+        //appendChild
+        //insertBefore
+
+        window.onload = function() {
+            var oUl = document.getElementById("ul12");
+            var oBtn = document.getElementById("btn12");
+            var oTxt = document.getElementById("txt12");
+            var aLi = oUl.getElementsByTagName("li");
+            oBtn.onclick = function() {
+                var oLi = document.createElement("li");
+                oLi.innerHTML = oTxt.value;
+                //oUl.appendChild(oLi)
+                if ((aLi.length = 0)) {
+                    oUl.appendChild(oLi);
+                } else {
+                    oUl.insertBefore(oLi, aLi[0]);
+                }
+            };
+        };
+    </script>
+
+    <body>
+        <input type="text" value="创建dom" id="txt12" />
+        <input type="button" value="创建dom" id="btn12" />
+        <ul id="ul12">
+            <li></li>
+        </ul>
+    </body>
 </html>
