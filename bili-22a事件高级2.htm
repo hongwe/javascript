@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>事件高级1 事件绑定</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            var oDivB = document.getElementById("div22b");
+            var oDivC = document.getElementById("div22c");
+            var oParent = document.getElementById("parent");
+            var disX = 0;
+            oDivB.onmousedown = function(ev) {
+                var oEvent = ev || event;
+                var disX = oEvent.clientX - oDivB.offsetLeft;
+
+                document.onmousemove = function(ev) {
+                    var oEvent = ev || event;
+                    var l = oEvent.clientX - disX;
+                    if (l < 0) {
+                        l = 0;
+                    } else if (l > oParent.offsetWidth - oDivB.offsetWidth) {
+                        l = oParent.offsetWidth - oDivB.offsetWidth;
+                    }
+                    oDivB.style.left = l + "px";
+
+                    var scale = l / (oParent.offsetWidth - oDivB.offsetWidth);
+                    document.title = scale;
+
+                    oDivC.style.width = 400 * scale +'px'
+                    oDivC.style.height = 400 * scale +'px'
+                };
+                document.onmouseup = function() {
+                    document.onmousemove = null;
+                    document.onmouseup = null;
+                };
+                return false;
+            };
+        };
+    </script>
+
+    <body>
+        <div id="parent">
+            <div class="" id="div22b"></div>
+        </div>
+        <div id="div22c"></div>
+    </body>
+</html>

@@ -88,3 +88,19 @@ table th {
     list-style: none;
     position: absolute;
 }
+#parent {
+    width: 600px;
+    height: 20px;
+    background: #ccc;
+    margin: auto;
+    position: relative;
+}
+#div22b {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: red;
+    left: 0;
+    top: 0;
+}
+#div22c{background: #333;}
