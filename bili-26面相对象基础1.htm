@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>面相对象</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+        <script type="text/javascript">
+            // var arr = [1, 2, 3, 4];
+            // arr.a = 12;
+
+            // arr.show = function() {
+            //     alert(this.a);
+            // };
+            // oDiv.onclick = function() {
+            //     alert(this);
+            // };
+
+            // arr.show();
+
+            //第一个面相对象的程序
+            // var obj = new Object();
+            // obj.name = "blue";
+            // obj.qq = "2234234";
+            // obj.showQQ = function() {
+            //     alert("我的QQ号:" + this.qq);
+            // };
+            // obj.showQQ();
+
+            function CreatePerson(name, qq) {
+                //构造函数 构建一个对象
+                //工厂方式
+                //缺点:1没有new, 2函数重复
+                //原料
+                var obj = new Object();
+                //加工
+                obj.name = name;
+                obj.qq = qq;
+                obj.showQQ = function() {
+                    console.log("我的QQ号:" + this.qq);
+                };
+                obj.showName = function() {
+                    console.log("我的姓名:" + this.name);
+                };
+                //出厂
+                return obj;
+            }
+
+            var arr1 = new Array(12, 33, 634, 34, 734);
+            arr1.sum = function() {
+                var res = 0;
+                for (let i = 0; i < this.length; i++) {
+                    res += this[i];
+                }
+                return res;
+            };
+        </script>
+    </head>
+
+    <body>
+        <!--
+        面向对象编程OOP的特点
+            1.抽象
+            2.封装
+            3.继承(遗传)
+                多重继承
+                多态
+        对象的组成
+            方法
+            属性
+        -->
+        <!-- this 95% -->
+    </body>
+</html>
