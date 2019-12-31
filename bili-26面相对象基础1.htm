@@ -45,14 +45,32 @@
                 //出厂
                 return obj;
             }
-
+            //原型方法 类似 class
             var arr1 = new Array(12, 33, 634, 34, 734);
-            arr1.sum = function() {
+            var arr2 = new Array(23, 233, 634);
+            Array.prototype.sum = function() {
+                //arr1.sum = function() { 类似行间样式
                 var res = 0;
                 for (let i = 0; i < this.length; i++) {
                     res += this[i];
                 }
                 return res;
+            };
+            alert(arr1.sum());
+            alert(arr2.sum());
+
+            //混合方式 改写
+            function CreatePersonA(name, qq) {
+                //用构造函数加属性
+                this.name = name;
+                this.qq = qq;
+            }
+            //用原型加方法
+            CreatePersonA.prototype.showName = function() {
+                console.log("我的姓名:" + this.name);
+            };
+            CreatePersonA.prototype.showQQ = function() {
+                console.log("我的姓名:" + this.name);
             };
         </script>
     </head>
@@ -70,5 +88,12 @@
             属性
         -->
         <!-- this 95% -->
+        <!-- 
+            类,对象
+            类  模子
+            对象 产品(成品)
+            Array 类
+            arr1 对象
+         -->
     </body>
 </html>
