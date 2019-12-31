@@ -65,3 +65,26 @@ table th {
     right: 0;
     bottom: 0;
 }
+#div21a {
+    width: 150px;
+    height: 200px;
+    background: #ddd;
+    border: 1px solid #333;
+    list-style: none;
+    display: none;
+    position: absolute;
+}
+#div21a ul {
+    list-style: none;
+}
+#div21a li {
+    list-style: none;
+}
+#div21b {
+    width: 150px;
+    height: 150px;
+    background: #ddd;
+    border: 1px solid #333;
+    list-style: none;
+    position: absolute;
+}

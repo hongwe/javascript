@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>事件高级1 事件绑定</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+    </head>
+
+    <script type="text/javascript">
+        //事件绑定
+        // window.onload = function() {
+        //     alert('a')
+        // };
+        // window.onload = function() {
+        //     alert('b')
+        // };
+        //
+        //attachEvent   ie下
+        //addEventListener
+        window.onload = function() {
+            var oBtn = document.getElementById("btn22");
+            // oBtn.attachEvent("onclick", function() {
+            //     alert("a");
+            // });
+
+            //   oBtn.addEventListener("click", function() {
+            //      alert("a");
+            // },false);
+
+            if (oBtn.attachEvent) {
+                oBtn.attachEvent("onclick", function() {
+                    alert("a");
+                });
+            } else {
+                oBtn.addEventListener(
+                    "click",
+                    function() {
+                        alert("a");
+                    },
+                    false
+                );
+            }
+        };
+    </script>
+
+    <body>
+        <!-- 右键菜单 -->
+        <div id="div22a"></div>
+
+        <button type="button" id="btn22">绑定</button>
+    </body>
+</html>
