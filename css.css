@@ -1,106 +1,23 @@
-#ul1 li {
-    width: 100px;
-    float: none;
-}
-.box-wapper {
-    border: 1px solid #ccc;
-    width: 300px;
-    padding: 30px;
-    margin-bottom: 30px;
-}
-.red {
-    width: 200px;
-    height: 20px;
-    background: red;
-}
-.green {
-    width: 200px;
-    height: 20px;
-    background: green;
-}
-table {
-    border-collapse: collapse;
-}
-table td,
-table th {
-    border: 1px solid #ddd;
-    min-width: 80px;
-}
-#div15 {
-    width: 150px;
-    height: 200px;
-    background: green;
-    position: absolute;
-    left: -150px;
-}
-#div15 span {
-    position: absolute;
-    width: 200px;
-    height: 60px;
-    line-height: 20px;
-    background: #00f;
-    right: -20px;
-    top: 70px;
-}
-#div15b {
-    width: 200px;
-    height: 200px;
-    background: red;
-    filter: opacity(30);
-    opacity: 0.3;
-}
-#div16 {
-    width: 150px;
-    height: 100px;
-    background: red;
-    position: absolute;
-    left: 0;
-    left: 50px;
-}
-#div16c {
-    width: 100px;
-    height: 150px;
-    background: red;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-#div21a {
-    width: 150px;
-    height: 200px;
-    background: #ddd;
-    border: 1px solid #333;
-    list-style: none;
-    display: none;
-    position: absolute;
-}
-#div21a ul {
-    list-style: none;
-}
-#div21a li {
-    list-style: none;
-}
-#div21b {
-    width: 150px;
-    height: 150px;
-    background: #ddd;
-    border: 1px solid #333;
-    list-style: none;
-    position: absolute;
-}
-#parent {
-    width: 600px;
-    height: 20px;
-    background: #ccc;
-    margin: auto;
-    position: relative;
-}
-#div22b {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    background: red;
-    left: 0;
-    top: 0;
-}
-#div22c{background: #333;}
+#ul1 li{width:100px;float:none}
+.box-wapper{border:1px solid #ccc;width:300px;padding:30px;margin-bottom:30px}
+.red{width:200px;height:20px;background:red}
+.green{width:200px;height:20px;background:green}
+table{border-collapse:collapse}
+table td,table th{border:1px solid #ddd;min-width:80px}
+#div15{width:150px;height:200px;background:green;position:absolute;left:-150px}
+#div15 span{position:absolute;width:200px;height:60px;line-height:20px;background:#00f;right:-20px;top:70px}
+#div15b{width:200px;height:200px;background:red;filter:opacity(30);opacity:.3}
+#div16{width:150px;height:100px;background:red;position:absolute;left:0;left:50px}
+#div16c{width:100px;height:150px;background:red;position:absolute;right:0;bottom:0}
+#div21a{width:150px;height:200px;background:#ddd;border:1px solid #333;list-style:none;display:none;position:absolute}
+#div21a ul{list-style:none}
+#div21a li{list-style:none}
+#div21b{width:150px;height:150px;background:#ddd;border:1px solid #333;list-style:none;position:absolute}
+#parent{width:600px;height:20px;background:#ccc;margin:auto;position:relative}
+#div22b{width:20px;height:20px;position:absolute;background:red;left:0;top:0}
+#div22c{background:#333}
+
+#div28a{background:#333}
+#div28a input{ background: white; width: 100px;height: 30px;}
+#div28a input.active{ background: yellow;}
+#div28a div{ background: yellow; width: 300px; height: 300px;}W
