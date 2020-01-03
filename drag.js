@@ -5,6 +5,7 @@ function Drag(id) {
     this.oDiv = document.getElementById(id);
     this.oDiv.onmousedown = function(ev) {
         _this.fnDown(ev);
+        return false;
     };
 }
 Drag.prototype.fnDown = function(ev) {
