@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Bom</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+        <script type="text/javascript">
+            //    document.onclick = function(){
+            //     //    alert(
+            //     //    //document.documentElement.scrollTop;
+            //     //     //document.body.scrollTop
+            //     //    )
+
+            //    }
+            window.onscroll = window.onresize = function() {
+                var scrollTop =
+                    document.documentElement.scrollTop ||
+                    document.body.scrollTop;
+                var oDiv = document.getElementById("div30a");
+                oDiv.style.top =
+                    document.documentElement.clientHeight -
+                    oDiv.offsetHeight +
+                    scrollTop +
+                    "px";
+            };
+        </script>
+    </head>
+
+    <body style="height:6000px">
+        <div id="div30a"></div>
+    </body>
+</html>
