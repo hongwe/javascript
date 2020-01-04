@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>改写面相对象的拖拽</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+        <script src="drag.js"></script>
+        <script src="limitdrag.js"></script>
+
+        <script type="text/javascript">
+            // window.onload = function() {
+            //     oDiv = document.getElementById("div29c");
+            //     oDiv.onmousedown = function(ev) {
+            //         var oEvent = ev || event;
+            //         var disX = oEvent.clientX - oDiv.offsetLeft;
+            //         var disY = oEvent.clientY - oDiv.offsetTop;
+            //         document.onmousemove = function(ev) {
+            //             var oEvent = ev || event;
+            //             oDiv.style.left = oEvent.clientX - disX + "px";
+            //             oDiv.style.top = oEvent.clientY - disY + "px";
+            //         };
+            //         document.onmouseup = function() {
+            //             var oEvent = ev || event;
+            //             document.onmousemove = null;
+            //             document.onmouseup = null;
+            //         };
+            //     };
+            // };
+            //改写面相对象的拖拽
+            //oDiv = null;
+            window.onload = function() {
+                new Drag("div29c");
+                new LimitDrag("div29d");
+            };
+            // function Drag(id) {
+            //     var _this = this;
+            //     this.disX = 0;
+            //     this.disY = 0;
+            //     this.oDiv = document.getElementById(id);
+            //     this.oDiv.onmousedown = function(ev) {
+            //         _this.fnDown(ev);
+            //     };
+            // }
+            // Drag.prototype.fnDown = function(ev) {
+            //     var _this = this;
+            //     var oEvent = ev || event;
+            //     this.disX = oEvent.clientX - this.oDiv.offsetLeft;
+            //     this.disY = oEvent.clientY - this.oDiv.offsetTop;
+            //     document.onmousemove = function(ev) {
+            //         _this.fnMove(ev);
+            //     };
+            //     document.onmouseup = function(ev) {
+            //         _this.fnUp(ev);
+            //     };
+            // };
+            // Drag.prototype.fnMove = function(ev) {
+            //     var oEvent = ev || event;
+            //     this.oDiv.style.left = oEvent.clientX - this.disX + "px";
+            //     this.oDiv.style.top = oEvent.clientY - this.disY + "px";
+            // };
+            // Drag.prototype.fnUp = function() {
+            //     document.onmousemove = null;
+            //     document.onmouseup = null;
+            // };
+
+            //继承
+        </script>
+    </head>
+
+    <body>
+        <div id="div29c"></div>
+        <div id="div29d"></div>
+
+        <!--
+            知识点:
+
+
+            系统对象
+                本地对象    非静态对象   new出来
+
+                内置对象   静态对象     Global Math
+
+                宿主对象
+                    宿主
+                    js运行环境(浏览器)
+         -->
+    </body>
+</html>

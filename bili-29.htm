@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>json实现面相对象</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+        <script type="text/javascript">
+            var json = {
+                // s: 12,
+                // show: function() {
+                //     alert(this.s);
+                // }
+
+                //例子2
+                name: "blue",
+                qq: "2434245",
+                showName: function() {
+                    alert("我的名字叫" + this.name);
+                },
+                showQq: function() {
+                    alert("我的qq是" + this.qq);
+                }
+            };
+            json.showName();
+            json.showQq();
+        </script>
+    </head>
+
+    <body>
+        <div id="div29a"></div>
+    </body>
+</html>
