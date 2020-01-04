@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>正则表达式</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+        <script type="text/javascript">
+            //例子1
+            //i 忽略大小写
+            // var re = new RegExp("a","i");
+            // var re = /a/i;
+            // var sStr = "Abcde";
+            // alert(sStr.search(re))
+            //例子2
+            //  \n
+            //  \d  数字        \D  [^0-9]
+            //  \g  全部
+            //  \w  英文 数字 下划线    \W  [^a-z0-9_]
+            //  \s  空白        \S 非空
+            //  +  若干
+            //  .   任意字符
+            //   match  把所有匹配的提取出来
+            //  [abc]pc
+            //  [a-z]
+            //  [0-9]
+            //  [^a-z0-9]
+
+            //量词
+            // {n} 正好出现n次  [1-9]\d{7} 电话号
+            // {n,m}最少n次 最多m次 [1-9]\d{4,10} qq号
+            // {n,}最少n次 最多不限
+            //+   {1,0}
+            //?   {0,1}     固定电话 010-8378234    (0\d{2,3}-)?[1-9]\d{7}(-\d{1,5})
+            //*    {0,}
+
+            //^ 行首
+            //$ 行尾
+            //邮箱正则
+            //  一串英文,数字,下划线    @
+            //  ^\w+@[a-z0-9]+\.[a-z]+$/i;
+            // test  字符串一部分符合要求; true
+            var str = "adsf 23a2 323 vcwsd";
+            var re = /\d/;
+            var re = /\d/g;
+            var re = /\d+/g;
+            //replace 替换  配合正则
+            var re2 = /a/g;
+            alert(str.search(re));
+            alert(str.match(re));
+            alert(str.replace(re2, "0"));
+        </script>
+    </head>
+
+    <body>
+        <div id="div30b"></div>
+        <div style="width: 400px;">
+            <h1>正则表达式</h1>
+            <h2>复习字符串操作</h2>
+            <h3>search <span>查找</span></h3>
+
+            <h3>substring <span>获取子字符串</span></h3>
+            <h3>charAt <span>获取某个字符串</span></h3>
+            <h3>split <span>分割字符串,获取数组</span></h3>
+
+            <script type="text/javascript">
+                // var str = "asdsdfsdf";
+                // var str2 = "12-3423-223-5234";
+                // alert(str.search("f"));
+                // alert(str.substring(2,5));
+                // alert(str.substring(2));
+                // alert(str.charAt(2));
+                // alert(str2.split('-'));
+            </script>
+            <h2>找出字符串中的数字</h2>
+            <h3>用传统字符串操作完成</h3>
+            <h3>用正则表达式完成</h3>
+            <!-- <script type="text/javascript">
+                var str3 = "12 fff 87 er453  233";
+                alert(str3.match(/\d+/g));
+            </script> -->
+
+            <h3>正则.规则,规范</h3>
+            <h3>
+                邮箱 一串英文 一串数字 + @ +一串英文 一串数字 + . + 一串英文
+            </h3>
+        </div>
+    </body>
+</html>

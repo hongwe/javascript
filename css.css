@@ -1,3 +1,8 @@
+
+h1{ font-size: 24px ; color: blue; font-weight: normal;}
+h2{ font-size: 20px ; color: #333;font-weight: normal;}
+h3{ font-size: 16px ; color: #999;font-weight: normal;}
+h3 span{float: right;}
 #ul1 li{width:100px;float:none}
 .box-wapper{border:1px solid #ccc;width:300px;padding:30px;margin-bottom:30px}
 .red{width:200px;height:20px;background:red}

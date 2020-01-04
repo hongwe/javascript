@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>过滤</title>
+        <link rel="stylesheet" href="css.css" id="lina" />
+        <script type="text/javascript">
+            window.onload = function() {
+                var oTxt1 = document.getElementById("txt32b");
+                var oTxt2 = document.getElementById("txt32bb");
+                var oBtn = document.getElementById("btn32b");
+                var oBtn2 = document.getElementById("btn32bb");
+                oBtn.onclick = function() {
+                    var re = /北京|百度/g;
+                    oTxt2.value = oTxt1.value.replace(re, "****");
+                };
+                oBtn2.onclick = function() {
+                    //var re2 = /<.+>/g;
+                    var re2 = /<[^<>].+>/g;
+                    oTxt2.value = oTxt1.value.replace(re2, "");
+                };
+            };
+        </script>
+    </head>
+
+    <body>
+        <div id="div32b">
+            <textarea name="" id="txt32b" cols="40" rows="10"></textarea>
+            <input type="button" value="过滤" id="btn32b" />
+            <input type="button" value="去html标签" id="btn32bb" />
+            <textarea name="" id="txt32bb" cols="40" rows="10"></textarea>
+        </div>
+    </body>
+</html>
+5
