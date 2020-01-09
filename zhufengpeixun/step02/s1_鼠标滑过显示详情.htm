@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>鼠标滑过显示详情</title>
+        <!-- import css -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                box-sizing: border-box;
+                width: 200px;
+                height: 40px;
+                border: 1px lightsalmon solid;
+                margin: 20px auto;
+                text-align: center;
+                line-height: 40px;
+                position: relative;
+            }
+            .box .detail {
+                box-sizing: border-box;
+                width: 500px;
+                height: 40px;
+                border: 1px lightsalmon solid;
+                position: absolute;
+                text-align: center;
+                line-height: 40px;
+                top: 38px;
+                right: -1px;
+                z-index: -1;
+                display: none;
+            }
+            .box:hover .detail {
+                display: block;
+            }
+            .box:hover {
+                border-bottom: 1px solid #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 基于css -->
+        <div class="box">
+            <span>购物车</span>
+            <div class="detail">
+                购物车的相关信息
+            </div>
+        </div>
+       
+    </body>
+</html>

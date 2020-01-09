@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>鼠标滑过显示详情</title>
+        <!-- import css -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                box-sizing: border-box;
+                width: 200px;
+                height: 40px;
+                border: 1px lightsalmon solid;
+                margin: 20px auto;
+                text-align: center;
+                line-height: 40px;
+                position: relative;
+                cursor: pointer;
+            }
+            .box .detail {
+                box-sizing: border-box;
+                width: 500px;
+                height: 40px;
+                border: 1px lightsalmon solid;
+                position: absolute;
+                text-align: center;
+                line-height: 40px;
+                top: 38px;
+                right: -1px;
+                z-index: -1;
+                display: none;
+            }
+            /* .box:hover .detail {
+                display: block;
+            } */
+            /* .box:hover {
+                border-bottom: 1px solid #fff;
+            } */
+        </style>
+
+        <!-- 
+            传统基于操作dom的方式实现业务需求
+            1.想操作谁先获取谁
+            2.给某元素绑定绑定事件
+            3.在事件触发的时候修改元素样式
+         -->
+    </head>
+    <body>
+        <!-- 基于js -->
+        <div class="box" id="box">
+            <span>购物车</span>
+            <div class="detail" id="detail">
+                购物车的相关信息
+            </div>
+        </div>
+        <script>
+            let oBox = document.getElementById('box');
+            let oDetail = document.getElementById('detail');
+            //元素对象.onxxx = function(){}:事件绑定,xxx事件类型
+            oBox.onclick = function() {
+                //
+                console.log('哈哈');
+                console.log(oDetail.style.display == 'none')
+                if ((oDetail.style.display == 'none')) {
+                    oDetail.style.display = 'block';
+                    box.style.borderBottomColor = '#fff';
+                } else {
+                    oDetail.style.display = 'none';
+                    box.style.borderBottomColor = 'lightsalmon';
+                }
+            };
+        </script>
+    </body>
+</html>
