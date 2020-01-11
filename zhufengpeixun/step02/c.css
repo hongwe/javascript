@@ -1,3 +1,10 @@
+*{margin: 0;padding: 0;}
 .submitBtn{cursor:pointer;box-sizing:border-box;padding:0 15px;border:1px solid red;height:30px; vertical-align: bottom;}
 .inputType1{border:1px solid red;height:30px;box-sizing:border-box; padding: 0 5px;}
 .boxType1{ box-sizing: border-box; width: 200px; height: 200px; border: 3px lightblue solid;}
+
+.uitype1{list-style:none;box-sizing: border-box; width: 300px;padding: 20px;
+border: 2px solid lightblue;}
+
+.uitype1 li{line-height: 35px; border-bottom: 2px dashed lightcoral; }
+.uitype1 li:nth-last-child(1){ border-bottom: none;}
