@@ -31,7 +31,7 @@
                 top: 38px;
                 right: -1px;
                 z-index: -1;
-                display: none;
+                /* display: none; */
             }
             /* .box:hover .detail {
                 display: block;
@@ -52,7 +52,7 @@
         <!-- 基于js -->
         <div class="box" id="box">
             <span>购物车</span>
-            <div class="detail" id="detail">
+            <div class="detail" id="detail" style="display: none;">
                 购物车的相关信息
             </div>
         </div>
@@ -61,10 +61,16 @@
             let oDetail = document.getElementById('detail');
             //元素对象.onxxx = function(){}:事件绑定,xxx事件类型
             oBox.onclick = function() {
-                //
+                //元素对象.style.xxx = xxx: 修改元素的某一个样式值(操作的是元素行内样式,如果我们没有把样式写在行内,在js中基于.style.xxx的方式是无法获取样式的)
+                //1.首先获取Detail原有的显示样式(显示还是隐藏):元素.style.xxx就是获取某一个样式(前提:需要在元素行内设置这个样式才能获取到)
+                /*  a = 12;
+                a;
+                detail.style.display; */
+                //2.
                 console.log('哈哈');
-                console.log(oDetail.style.display == 'none')
-                if ((oDetail.style.display == 'none')) {
+                console.log(oDetail.style.display == 'none');
+                let n = oDetail.style.display
+                if (n == 'none') {
                     oDetail.style.display = 'block';
                     box.style.borderBottomColor = '#fff';
                 } else {

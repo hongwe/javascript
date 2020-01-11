@@ -61,3 +61,11 @@ else{
 
 2. 三元运算
 3. switch case
+
+####  循环
+> 重复做某些事情就是循环
+- for 循环
+- for in 循环
+- for of 循环(es6新增)
+- while 循环
+- do while 循环
