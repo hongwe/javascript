@@ -1,0 +1,8 @@
+*{margin:0;padding:0}
+ul{list-style:none}
+#tabBox{box-sizing:border-box;margin:20px auto;width:500px}
+#navBox{display:flex;top: 1px;}
+#navBox li{margin-right:10px;box-sizing:border-box;border:1px solid #999;line-height:35px;padding:0 10px; margin-bottom: -1px;;}
+#navBox li.active{ border-bottom: 1px solid #fff;}
+#tabBox>div{box-sizing:border-box;padding:10px;height:150px;border:1px solid #999;display: none;}
+#tabBox>div.active{display: block;}
