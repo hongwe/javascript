@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>题讲解</title>
+    </head>
+    <body>
+        <script>
+            // 题1
+            /*  let a = { n: 1 };
+            let b = a;
+            a.x = a = { n: 2 };
+            a.n = 1000;
+            console.log(a.x);
+            console.log(b);
+            console.log(b.n);
+            console.log(b.x.n); */
+
+            // 题2
+            /*  var a = 'abc' + 456 + 123; //=>abc123456
+            var b = '456' - '123'; //=>333
+            var c =
+                100 + //=>100
+                true + //=>101
+                21.2 + //=>122.2
+                null + //=>122.2null
+                undefined + //=>NaN
+                'tencten' + //=>NaNtencten
+                [] + //=>NaNtencten
+                null + //=>NaNtenctennull
+                9 + //=>NaNtenctennull9
+                false; //=>NaNtenctennull9false
+            console.log(a, b, c); //=>NaNtenctennull9false */
+
+            // 题3
+            var str = 'abc123';
+            var num = parseInt(str);
+            console.log(num)
+            if (num == NaN) {
+                alert(NaN);
+            } else if (num == 123) {
+                alert(123);
+            } else if (typeof num == 'number') {
+                alert('number');
+            } else {
+                alert('str');
+            }
+        </script>
+        <!-- 
+         //let a = { n: 1 };
+         变量存储           值存储          堆内存
+            a           aaafff000       aaafff000:{ n: 1 }
+         //let b = a;   
+            b           aaafff000
+         //a.x = a
+            a           aaafff000       aaafff000:{ n: 1 ,x:aaafff111} 
+                        aaafff111       aaafff111:{ n: 2 }
+            b
+            >a =>aaafff111   b=>aaafff000
+
+        //
+
+        
+         -->
+    </body>
+</html>

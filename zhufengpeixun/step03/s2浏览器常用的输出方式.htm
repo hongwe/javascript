@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>浏览器常用的输出方式</title>
+    </head>
+    <body>
+        <script>
+            let a = 1;
+            let b = [
+                {
+                    id: 1,
+                    name: '张三'
+                },
+                {
+                    id: 2,
+                    name: '李四'
+                }
+            ];
+
+            //1. console.log/dir/table
+            //.dir:输出一个对象的详细键值对的信息
+            //.table: 把一个多维json数组再控制台按照表格的方式呈现
+
+            /* 
+            [12,32]  一维数组
+            [12,{name:'xxx'}]  二维数组
+            [12,[{xxx:'xxx'}]]  三维数组 => 多维数组
+            {name:'xxx'} 一维对象
+            {name:[12,23]} 二维对象
+            {
+                name:{
+                    xxx:{
+                        xxx:{
+                            xxx:{
+                                
+                            }
+                        }
+                    }
+                }
+            }
+            {
+                fn:function(){
+
+                }
+            }
+             */
+            console.log(a);
+            console.log(b);
+            console.dir(a);
+            console.dir(b);
+            console.table(a);
+            console.table(b);
+            console.table(b);
+            console.info(b);
+
+            // 2. 浏览器窗口弹窗  alert/ confirm/ prompt
+            //=>三种方式的结果都比先经过toString转换为字符串
+
+            /*    alert(100); //=>'100'
+             //=>三种方式会阻断js的代码执行,只有当窗口关掉,js才会继续运行
+            alert([10, 20, 30]); //=>'10,20,30'
+            alert({
+                name: 'xxx'
+                //=>'[object Object]'
+            }); */
+            /* for (let index = 0; index < 5; index++) {
+                alert(index);
+                console.log('哈哈');
+            } */
+            //confirm确定和取消:选择型弹框
+            /* confirm(100);
+            //prompt:在confirm基础上多了一个输入框
+            prompt(100); */
+
+
+            //3. document.write在页面中写入信息
+            //=>和alert一样,输出结果都是字符串
+        </script>
+    </body>
+</html>
