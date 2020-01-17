@@ -20,15 +20,23 @@
     <body style="background-color: white;">
         <input type="button" value="点击变色" id="changeBtn" />
         <script>
-            let changeBtn = document.getElementById('changeBtn');
+            let changeBtn = document.getElementById("changeBtn");
             let body = document.body;
-            let i= 0;
-            let ary =['white','pink','lightblue','lightgreen','rgb(194,109,109)','orange','#999']
+            let i = 0;
+            let ary = [
+                "white",
+                "pink",
+                "lightblue",
+                "lightgreen",
+                "rgb(194,109,109)",
+                "orange",
+                "#999"
+            ];
             changeBtn.onclick = function() {
                 //获取当前的背景颜色  元素.style.xxx只能获取行内样式(颜色再样式种使用16进制方式)
 
                 let bg = body.style.backgroundColor;
-                switch (bg) {
+                /* switch (bg) {
                     case 'white':
                         body.style.backgroundColor = 'red';
                         break;
@@ -38,7 +46,11 @@
                     default:
                         body.style.backgroundColor = 'white';
                         break;
-                }
+                } */
+                i++; //=>ary[i]//从数组中拿样式值，只需要 ary[i]//每点击一次i累加1
+                console.log(ary[i]);
+                i > ary.length - 1 ? (i = 0) : null;//累加后大于数组索引，归零
+                body.style.backgroundColor = ary[i];
 
                 // if (bg == 'white') {
                 //     body.style.backgroundColor = '#000000';
