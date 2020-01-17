@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #list {
+            width: 758px;
+            margin: auto;
+            border: none;
+        }
+        .page {
+            width: 758px;
+            height: 1088px;
+            border: none;
+        }
+        .page img {
+            width: 758px;
+            height: auto;
+            max-height: 1088px;
+        }
+        .pagehalf {
+            width: 758px;
+            height: 544px;
+            border: none;
+        }
+        .pagehalf img {
+            width: 758px;
+            height: auto;
+            max-height: 544px;
+        }
+        .pagenone1 img {
+            width: 758px;
+            height: auto;
+            max-height: 544px;
+        }
+        .pagenone2 img {
+            width: 758px;
+            height: auto;
+            max-height: 544px;
+        }
+        .pagenone1 {
+            width: 758px;
+            height: 544px;
+            border: none;
+            display: none;
+        }
+        .pagenone2 {
+            width: 758px;
+            height: 544px;
+            border: none;
+            display: none;
+        }
+    </style>
+    <body>
+        <div>
+            <div id="list"></div>
+        </div>
+        <script src="plist.js"></script>
+        <script>
+            window.onload = function() {
+                //填写页数(起始页,最终页)
+                pList(1, 50);
+            };
+        </script>
+
+        <style>
+            /* 填入没有的编号 */
+
+            #p158 {
+                display: none;
+            }
+
+            /* 有维护的编号 */
+            #p001 .pagenone1 {
+                display: block;
+            }
+            #p001 .pagenone2 {
+                display: block;
+            }
+        </style>
+    </body>
+</html>
