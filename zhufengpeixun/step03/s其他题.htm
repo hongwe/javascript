@@ -20,7 +20,8 @@
     <body>
        <script>
        
-        console.log(!(!"Number(undefined)"));
+        !(!"Number(undefined)") //=> true
+        console.log(isNaN(parseInt(new Date())) + Number([1]) + typeof undefined); //=> 2undefined
 
        </script>
     </body>
