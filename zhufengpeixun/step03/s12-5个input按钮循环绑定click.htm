@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>按钮循环绑定</title>
+        <link rel="stylesheet" href="c.css" />
+    </head>
+    <body>
+        <button value="按钮1">按钮1</button>
+        <button value="按钮2">按钮2</button>
+        <button value="按钮3">按钮3</button>
+        <button value="按钮4">按钮4</button>
+        <button value="按钮5">按钮5</button>
+
+        <!-- import js-->
+        <script>
+            var btnList = document.getElementsByTagName('button');
+
+            /*  for (var i = 0; i < btnList.length; i++) {
+                btnList[i].onclick = function() {
+                    alert(i);
+                };
+            } */
+
+            /* 
+            栈内存                              堆内存
+
+            变量存储        值存储                 元素集合 
+            btnList        aaafff000            aaafff000   0:bbbfff000
+                                                            1:bbbfff111
+                                                            2:...
+                                                            3:...
+                                                            4:...
+                                                            length:5
+            
+                                                第一个button bbbfff000
+                                                第二个button bbbfff111
+                                                ...
+            i
+
+            i=0 第一次循环             bbbfff000  增加 onclick:堆cccfff000     堆cccfff000:
+                                                                            函数体重的代码字符串
+                                                                                'alert(i)'
+            btnList[i].onclick = function() {
+                    alert(i);
+                };
+            i=2 第二次循环
+            btnList[i].onclick = function() {
+                    alert(i);
+                };
+                ...
+            => 循环结束 i=5
+                                                                                堆cccfff111:
+                                                                            函数体重的代码字符串
+                                                                                'alert(i)'
+
+                                                                                堆cccfff222:
+                                                                            函数体重的代码字符串
+                                                                                'alert(i)'
+                                                                                    ...
+                                                                                堆cccfff444:
+                                                                            函数体重的代码字符串
+                                                                                'alert(i)'
+            点击第二个button,把之前赋值给onclick  属性对应的函数 cccfff111之心
+            形成一个全新私有栈内存
+
+
+
+            */
+
+            /*   //创建函数
+            function fn(n, m) {
+                var res = null;
+                res = n + m;
+                return res;
+            }
+
+            执行函数;
+            //fn(10, 20);
+            var AA = fn(10, 20);
+            console.log(AA); */
+
+            for (var i = 0; i < btnList.length; i++) {
+                btnList[i].myIndex = i;
+                btnList[i].onclick = function() {
+                    alert(this.myIndex);
+                };
+            }
+        </script>
+    </body>
+</html>
