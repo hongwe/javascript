@@ -28,8 +28,12 @@ function [函数名]([形参变量1],...){
 
 ```
 
-==========
-js 中加减乘除本应是进行数学运算(如果遇到值不是数字类型,也需要基于 Number()方法把其转换为数字,在进行运算);但是 js 中加法有特殊情况:相加过程中遇到字符串直接变为字符串拼接
+======================
+
+js 中加减乘除本应是进行数学运算(如果遇到值不是数字类型,也需要基于 Number()方法把其转换为数字,在进行运算);但是 
+
+js 中加法有特殊情况:相加过程中遇到字符串直接变为字符串拼接
+
 =======================
 console.log(alert(1))
 
@@ -93,4 +97,74 @@ console.log(i)
 
 - arguments 函数内置的实参集合
   - 任意数求和(执行函数时传递N个值求和)
+
+- arrow function 箭头函数
+    * 简单
+    * 箭头函数中没有 arguments  比arguments更好玩 
+
+
+```javascript
+
+function sum(n, m) {
+    return n + m;
+}
+
+
+//改成箭头函数
+
+let sum = (n, m) => {
+    return n + m;
+};
+//如果函数体种只有一行return,可以省略return和大括号,一行搞定
+let sum = (n, m) => n + m;
+
+
+console.log(sum(10, 20));
+
+
+
+function fn(n) {
+    return function(m) {
+        return n + m;
+    };
+}
+//改成箭头函数
+let fn = n => m => n + m;
+
+
+
+function sum(n, m) {
+    if (typeof n === 'undefined') {
+        n = 0;
+    }
+    if (typeof m === 'undefined') {
+        m = 0;
+    }
+    return n + m;
+}
+
+//改成箭头函数eval
+
+//形参赋值默认值:当没有给形参传递实参的时候,执行默认值
+let sum = (n =0 , m=0) => n + m;
+
+
+
+ let sum =(...arg) =>{ 
+
+
+     console.log(arg)
+ }
+
+
+//不能用arguments,但是我们可以使用剩余运算符获取到传递实参集合,而且(它是数组)
+let sum = (...arg) => eval(arg.join('+'));
+
+
+
+console.log(sum(1, 2, 3, 4));
+
+
+
+```
 
