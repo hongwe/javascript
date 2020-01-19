@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>计算年终奖题</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    </style>
+    <body>
+        工龄:<input type="text" value="1" id="workYear" />
+        <br />
+        薪资:<input type="text" valumite="14000" id="workMoney" />
+        <br />
+        <button id="submit">计算年终奖</button>
+        你的年终奖是:¥<span id="valBox"></span>
+        <script>
+            let workYear = document.getElementById('workYear');
+            let workMoney = document.getElementById('workMoney');
+            let submit = document.getElementById('submit');
+            let valBox = document.getElementById('valBox');
+
+            submit.onclick = function() {
+                //1.获取文本框信息
+                //文本框.value获取文本框输入内容,格式是字符串
+
+                let year = Number(workYear.value);
+                let money = Number(workMoney.value);
+                if (isNaN(year) || isNaN(money)) {
+                    alert('输入的内容是非法格式~~');
+                    return;
+                }
+                //2.经过逻辑处理,计算出结果
+                let result = null;
+                if (year < 1) {
+                    result = money >= 8000 ? money * 1.2 : money;
+                } else if (year >= 1 && year < 2) {
+                    result = money >= 10000 ? money * 1.7 : money * 1.5;
+                } else {
+                    result = money >= 12000 ? money * 3.2 : money * 3;
+                }
+                //3.把结果赋值给 #valBox
+                valBox.innerHTML = result;
+            };
+        </script>
+    </body>
+</html>
