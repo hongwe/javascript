@@ -1,10 +1,13 @@
-/* let a = 12;
+//[val].toString()
+/* 
+let a = 12;
 console.log(a.toString()); //=>'12'
 console.log((NaN).toString());//=>'NaN'
 console.log((null).toString());//=>报错
 // null和undefined是禁止直接 toString的
 //(null).toString() =>报错
-//null和undefined转成字符串结果 'null'/'undefined' */
+//null和undefined转成字符串结果 'null'/'undefined'
+*/
 
 //({name:'xxx'}).toString()  => "[object Object]"
 //普通对象.toString()  => "[object Object]" =>?

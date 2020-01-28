@@ -20,17 +20,17 @@ ary.length-1 最后一项的索引
 
 */
 
-/* 
+
 //push  向数组末尾增加内容
 
 
-let ary = [10, 20];
+/* let ary = [10, 20,30];
 let res = ary.push(30, 'AA');
 console.log(res,ary);
 // 基于原生js操作键值对的方法,也可以向末尾追加一项新的
 ary[ary.length] = 40
 console.log(res,ary); 
-*/
+ */
 
 /* 
 //unshift :向数组开始位置增加内容
@@ -39,12 +39,12 @@ console.log(res,ary);
 -   @return
     -   新增后的数组长度
  */
-/* let ary = [10, 20];
+let ary = [10, 20];
 let res = ary.unshift(30, 'AA');
-console.log(res,ary);
+console.log(res,ary); 
 // 基于原生es6展开运算符,把原有ary克隆一份,再新的数组中创建第一项,其余内容是由原始ary中的信息即可,也算实现了向开始追加的效果
 ary = [100, ...ary]
-console.log(res,ary); */
+console.log(res,ary);
 
 /* 
 -   `shift` : 删除数组中的第一项
