@@ -29,11 +29,11 @@ document.body.insertBefore(box, haha);
 ```
 
 
-
 `cloneNode(true/false)` 克隆元素或节点
 
 
 
-
-
 `removeChild` 移除某一个元素
+
+
+`setAttribute/getAttribute/removeAttribute`  设置获取移除元素的自定义属性信息(这种方式是吧自定义属性放到元素结构上)

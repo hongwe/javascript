@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>自定义属性</title>
+    </head>
+    <body>
+        <button>按钮1</button>
+        <button>按钮2</button>
+        <button>按钮3</button>
+
+        <!-- js -->
+        <script>
+            var btnList = document.querySelectorAll('button');
+            for (var i = 0; i < btnList.length; i++) {
+                //方案1
+                //设置自定义属性:元素对象.属性名=属性值 (原理是向元素对象对应的堆内存中添加了一个属性)
+                btnList[i].myIndex = i;
+
+                //方案2 setAttribute / getAttribute
+                //设置自定义属性: 基于 Set-Attribute十八属性信息写到了元素标签的结构上,在结构中可以看到,并没有放到元素对象对应的堆内存中
+                btnList[i].setAttribute('data-index',i)
+
+                btnList[i].onclick = function() {
+                    //获取自定义属性: 元素对象.属性值(原理是从堆内存中获取到对应的属性值)
+                    alert(this.myIndex);
+
+                    //获取自定义属性:基于 Get-Attribute可以把结构上存储的自定义属性值获取到
+                    alert(this.getAttribute('data-index'));
+
+
+                };
+            }
+        </script>
+    </body>
+</html>
