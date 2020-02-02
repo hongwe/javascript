@@ -107,7 +107,7 @@ box.clientHeight
 let winW = document.documentElement.clientWidth || document.body.clientWidth;
 let winH = document.documentElement.clientHeight || document.body.clientHeight;
 
-//获取盒子左边框和上边框的大小
+//获取盒子左边框和上边框的大小(IE8有区别)
 box.clientLeft
 box.clientTop
 
@@ -126,8 +126,65 @@ box.offsetHeight
 //=>在没有内容溢出的情况下,获取的结果和CLIENT一样的
 //=>在没有内容溢出的情况下,获取的结果约等于真是内容宽高(上 / 左 padding +正式内容的高度/宽度) 
 //1. 不同浏览器获取的结果不尽相同
-//2. 设置overglow 属性值对最后的结果产生一定的影响
+//2. 设置overflow 属性值对最后的结果产生一定的影响
 box.scrollWidth
 box.scrollHeight
+
+//获取整个页面真实的高度
+document.documentElement.scrollHeight || document.body.scrollHeight
+```
+
+
+
+```javascript
+let box = document.getElementById('box')
+
+//=>竖向滚动条卷去的高度
+//=>横向滚动条卷去的宽度
+//=>1.边界值
+//=>min = 0
+//=> max = 整个的高度scrollHeight - 屏幕高度clientHeight
+box.scrollTop
+box.scrollLeft
+//=> 13个盒子模型属性,只有这两个是 '可读写'的属性(既可以获取 也可以设置对应的值),其余都是'只读'属性(不能设置值,只能获取)
+box.scrollTop = 0;
+
+```
+
+```javascript
+//=>offsetParent: 获取它的父参照物(不一定是父元素)
+//父参照物和它的父元素没有必然的联系,父参照物查找:同一个平面中,最外层元素是所有后代元素的父参照物,而基于 position:relative/absolute/fixed 可以让元素脱离文档流(一个新的平面),从而改变元素的父参照物
+document.body.offsetParent = null
+//=>offsetTop: 距离其夫参照物的上偏移
+//=>offsetLeft: 距离其夫参照物的左偏移(当前元素的外边框到服参照物的里边框)
+```
+
+![](D:\github\javascript\zhufengpeixun\step06\元素偏移值.gif)
+
+
+
+
+
+**getComputedStyle / currentStyle**
+
+> 获取当前元素经过浏览器计算过的样式
+>
+> - 只要元素在页面中呈现出来,那么所有样式都是经过浏览器计算的
+> - 哪怕你没有设置和见过的样式也都计算了
+> - 不管你写或者不写,也不论写在哪,样式都在这,可以直接获取
+>
+> 在ie6-8浏览器中不兼容,需要基于currenStyle来获取
+
+
+
+```javascript
+//=>第一个参数是操作元素,是第二个参数是元素的伪类:after/:before
+//=>获取的结果是 CSSStyleDeclaration这个类的的实例,包含了当前元素的所有样式信息
+let styleObj window.getComputedStyle([element],null)
+styleObj['backroundColor']
+styleObj.display
+
+//=>ie6-8
+styleObj = [element].currentStyle;
 ```
 
