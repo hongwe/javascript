@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>音乐播放器</title>
+    </head>
+    <body>
+        <!-- 
+            1. 歌曲搜索
+                按下回车
+                查询数据
+                渲染数据
+            2. 歌曲播放
+                点击播放
+                歌曲地址获取
+                歌曲地址设置
+            3. 歌曲封面pause
+            4. 歌曲评论
+            5  播放动画
+                监听音乐播放(v-on play)
+                监听音乐暂停(v-on pause)
+                操纵类名(v-bind 对象)
+            6. mv播放
+                mv图标显示
+                mv地址获取
+                遮罩层
+                mv地址设置
+         -->
+        <div id="player">
+            <input
+                type="text"
+                autocomplete="off"
+                v-model="query"
+                @keyup.enter="searchMusic"
+            />
+            <ul>
+                <li v-for="(item,index) in musicList">
+                    <a href="javascript:;" @click="playMusic(item.id)">></a>
+                    {{ item.name }}
+                    <span v-if="item.mvid!= 0" @click="(playMv(item.mvid))"
+                        >mv</span
+                    >
+                </li>
+            </ul>
+            <img :src="musicCover" style="width: 100px; height:100px" />
+            <audio
+                ref="audio"
+                @play="play"
+                @pause="pause"
+                :src="musicUrl"
+                controls
+                autoplay
+                loop
+                style="width: 200px; height: 50px;"
+            ></audio>
+
+            <dl v-for="item in hotComments">
+                <dt>
+                    <img
+                        :src="item.user.avatarUrl"
+                        alt=""
+                        style="width: 50px; height: 50px;"
+                    />
+                </dt>
+                <dd>{{ item.nickname}}</dd>
+                <dd>{{ item.content}}</dd>
+            </dl>
+<div v-show= "isShow">
+    
+</div>
+            <video :src="mvUrl" controls></video>
+            <div class="mask" @click= "hide"></div>
+        </div>
+
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="vue.js"></script>
+        <script src="音乐播放器.js"></script>
+    </body>
+</html>

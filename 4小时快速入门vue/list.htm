@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+
+        <title>vue基础</title>
+    </head>
+    <body>
+        <div id="app">
+            <input type="button" value="add" @click = "add">
+            <input type="button" value="remove" @click = "remove"> 
+            <ul>
+                <li v-for="(it,index) in src">
+                    <a :href="it">{{ it }}</a>
+                </li>
+            </ul>
+        </div>
+
+        <script src="vue.js"></script>
+        <script>
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    src: [
+                        'ch1_examp1.html',
+                        'ch1_examp2.html',
+                        'ch2_examp1.html'
+                    ]
+                },
+                methods: {
+                    add: function() {
+                        this.src.push('ch2');
+                    },
+                    remove: function() {
+                        this.src.pop();
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <title>图片的延迟加载</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            img[scr=''] {
+                display: none;
+            }
+            .imgBox{
+                box-sizing: border-box;
+                margin: 800px auto;
+                background: #cccccc;
+                width: 450px;
+                height: 300px;
+
+            }
+            .imgBox img{ width: 100%; height: 100%;}
+        </style>
+    </head>
+    <body>
+        <!-- 
+            图片延迟加载
+            1.结构中 我们用一个盒子包裹着图片
+            2.最开始 img的src不设置任何图片地址,把图片的真实地址设置给自定义属性 data-src/true-img(最开始不展示图片:可以让图片隐藏)
+            3.当浏览器窗口完全展示到图片位置的时候,我们再去加载真实图片,并且让其显示出来(第一屏幕中的图片一般都会延迟加载,来等待其他资源先加载完)
+         -->
+        <div class="imgBox">
+            <img src="" alt="" trueImg="css盒子模型.gif" />
+        </div>
+        <!-- js -->
+        <script src="图片延迟加载.js"></script>
+    </body>
+</html>
