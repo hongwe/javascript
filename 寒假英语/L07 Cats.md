@@ -19,3 +19,5 @@
 #### 配音
 
     Everyone, stand back.
+
+![](D:\github\javascript\寒假英语\l7.jpg)

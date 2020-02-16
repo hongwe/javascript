@@ -34,3 +34,6 @@
     She likes dancing
     This is Molly.
     She likes singing.
+
+
+![](D:\github\javascript\寒假英语\l12.jpg)

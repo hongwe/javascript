@@ -96,7 +96,53 @@ let str = '<div id = "box" class = "box"></div>'
 document.body.innerHTML = str;
 
 
+$A.inserBefore($B)//=> 把$A放到$B的前面(注意点:$A和$B都是页面中已经存在的元素)
+$A.inserAfter($B)//=> 把$A放到$B的后面
+$('<div id='box' class='box'>')
+哈哈
+</div>).inserBefore($A) //=> 需要把新增加元素放到$A前面,需要吧字符串用$()包起来.相当于创建了一个元素
+$A.appendTo($B)//=> $B.append($A) 在$B容器的末尾追加$A
+$A.prependTo($B)//=> $B.prepend($A) 在$B容器的开头追加$A
 
 
+let $list = $('.list').clone(); //=>深克隆
+let $list = $('.list').clone(false); //=>浅克隆
+
+$A.clone() //=>实现元素的克隆
+$A.remove() //=>实现元素的删除
+
+
+//=>操作表单元素的内容
+$inp.val()//=>获取表单元素内容
+$inp.val('AAA')//=>设置表单元素内容
+//html和text方法是操作非表单元素内容的
+
+//=>3.操作自定义属性
+$box.attr('data-type')//=>获取自定义属性值
+$box.attr('data-type','B')//=>设置自定义属性值
+$box.attr({
+  'type':1,
+  'name':'aa'
+})//=>批量设置
+
+$box.removeAttr('data-type')//=>移除自定义属性
+
+//表单元素操作内置或者自定义属性一般使用 prop和removeProp
+$radio.prop('checked')
+$radio.prop('checked',true)
+$radio.removeProp('checked')
+
+
+//=>3.操作css样式(盒子模型属性)
+//设置样式
+$box.css('width',200)//=>css方法是设置或者批量设置样式(原理是设置style行内样式)$box.css({width:200,height:200})写的值不加单位,方法会帮我们自动设置上px单位
+add
+$box.addClass('active')//=>设置样式类(原理是对className的操作),removeClass是移除,hasClass验证是否存在某个样式类,toggleClass之前有就是移除,没有就是新增
+
+//获取样式
+$box.css('width') //=>不设置值得时候就是获取(原理是getComputedStyle),经过计算的样式都是获取
+
+$box.offset() //=>当前元素距离BODY的左偏移和上偏移
+$box.position()//=>当前元素距离BODY的左偏移和上偏移
 ```
 

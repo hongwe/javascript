@@ -4,7 +4,7 @@
 
 #### Vocabulary
 
-**fruit**    **apple**    **graoes**    **orange**    **juice**    **meat**
+**fruit**    **apple**    **grapes**    **orange**    **juice**    **meat**
 
 
 
@@ -13,7 +13,7 @@
 
 **Do you like ...?**
 
-- Do you laike fruit ?
+- Do you like fruit ?
 - Yes, I do. / No, I don't	
 
 

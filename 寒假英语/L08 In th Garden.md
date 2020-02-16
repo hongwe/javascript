@@ -29,3 +29,4 @@
     I am four.
     How old is he?
     He is six
+![](D:\github\javascript\寒假英语\l8.jpg)

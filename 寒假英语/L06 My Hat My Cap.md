@@ -19,3 +19,5 @@
 
     What's your name?
     My name is Tobbit.
+
+![](D:\github\javascript\寒假英语\l6.jpg)

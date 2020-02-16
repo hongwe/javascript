@@ -34,3 +34,4 @@
     He tries to say "Sorry."
     Many friend. Many games.
     How happly Tobbit is.
+![](D:\github\javascript\寒假英语\l10.jpg)

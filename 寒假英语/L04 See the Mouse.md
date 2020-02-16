@@ -28,3 +28,5 @@
 
     How are you?
     I am fine, Thank you
+
+![](D:\github\javascript\寒假英语\l4.jpg)

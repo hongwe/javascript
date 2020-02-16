@@ -1,0 +1,71 @@
+.layui-layout-admin .layui-logo{color:#1087eb}
+.layui-elem-quote{border-left-color:#1087eb}
+.layui-btn{background-color:#1087eb}
+.layui-btn-primary{background-color:#fff}
+.layui-btn-primary:hover{border-color:#1087eb}
+.layui-btn-group .layui-btn-primary:hover{color:#1087eb}
+.layui-laypage a:hover{color:#1087eb}
+.layui-laypage .layui-laypage-curr .layui-laypage-em{background-color:#1087eb}
+.layui-laypage select:focus{border-color:#1087eb!important}
+.layui-upload-drag .layui-icon{font-size:50px;color:#1087eb}
+.layui-upload-drag[lay-over]{border-color:#1087eb}
+.layui-nav-tree .layui-nav-child dd.layui-this a{background-color:#1087eb}
+.layui-nav-tree .layui-nav-bar{background-color:#1087eb}
+.layui-tab-brief>.layui-tab-title .layui-this{color:#1087eb}
+.layui-slider-input-btn i:hover{color:#1087eb}
+.layui-slider-wrap-btn{border-color:#1087eb!important}
+.layui-slider-bar{background:#1087eb!important}
+html .layui-laydate .layui-this{background-color:#1087eb!important}
+.laydate-theme-molv .layui-laydate-header{background-color:#1087eb}
+.laydate-theme-grid .laydate-selected,.laydate-theme-grid .laydate-selected:hover{color:#1087eb!important}
+.layui-progress-bar{background-color:#0083cc}
+.layui-form-select dl dd.layui-this{background-color:#0083cc}
+.layui-form-checked,.layui-form-checked:hover{border-color:#0083cc}
+.layui-form-checked span,.layui-form-checked:hover span{background-color:#0083cc}
+.layui-form-checked i,.layui-form-checked:hover i{color:#0083cc}
+.layui-form-checkbox[lay-skin=primary]:hover i{border-color:#0083cc}
+.layui-form-checked[lay-skin=primary] i{border-color:#0083cc;background-color:#0083cc}
+.layui-form-onswitch{border-color:#0083cc;background-color:#0083cc}
+.layui-form-radio>i:hover,.layui-form-radioed>i{color:#0083cc}
+.layui-table-edit:focus{border-color:#0083cc!important}
+.layui-nav-tree .layui-nav-itemed:after{background-color:#0083cc}
+.layui-nav-child dd.layui-this{background-color:#0083cc}
+.layui-nav .layui-nav-child dd.layui-this a{background-color:#0083cc}
+.layui-breadcrumb a:hover{color:#0083cc!important}
+.layui-tab-brief>.layui-tab-more li.layui-this:after,.layui-tab-brief>.layui-tab-title .layui-this:after{border-bottom:2px solid #0083cc}
+.layui-tab-card>.layui-tab-more .layui-this{color:#0083cc}
+.layui-timeline-axis{color:#0083cc}
+.laydate-day-mark::after{background-color:#0083cc!important}
+.layui-laydate-header i:hover,.layui-laydate-header span:hover{color:#0083cc!important}
+.layui-laydate-footer span:hover{color:#0083cc!important}
+.layui-nav .layui-this:after,.layui-nav-bar,.layui-nav-tree .layui-nav-itemed:after{background-color:#0083cc!important}
+.layui-transfer-active .layui-btn{background-color:#0083cc;border-color:#0083cc}
+.layui-form-checked[lay-skin=primary] i{border-color:#0083cc!important;background-color:#0083cc}
+.layui-btn-normal{background-color:#00ced1}
+.layui-btn-warm{background-color:#ff5722}
+.layui-btn-danger{background-color:#c00}
+.layui-btn-disabled,.layui-btn-disabled:active,.layui-btn-disabled:hover{background-color:#fbfbfb}
+.layui-btn-s1{line-height:31px!important;height:31px!important;padding:0 22px!important;background-color:#fff!important;color:#1087eb!important;border:1px solid #1087eb!important;border-radius:5px!important}
+.layui-btn-s1:hover{background-color:#1087eb!important;color:#fff!important}
+.layui-btn-s1:active{background-color:#0083cc!important;border-color:#0083cc!important}
+.layui-btn-s2{line-height:32px!important;height:32px!important;padding:0 22px!important;background-color:#1087eb!important;color:#fff!important;border:0!important;border-radius:5px!important}
+.layui-btn-s2:hover{background-color:#0083cc!important}
+.layui-btn-s2:active{background-color:#0083cc!important;border-color:#0083cc!important}
+.layui-btn-t1{line-height:22px!important;height:22px!important;padding:0 8px!important;background-color:#dcefff!important;color:#1087eb!important;border:0!important;border-radius:0!important}
+.layui-btn-t1:hover{background-color:#1087eb!important;color:#fff!important}
+.layui-btn-t1:active{background-color:#0083cc!important;border-color:#0083cc!important}
+.layui-bgc1{background-color:#1087eb!important}
+.layui-bgc2{background-color:#f2f4f7!important}
+.layui-bgc3{background-color:#edf0f3!important}
+#pageStyle1{background-color:#f2f5f7!important;text-align:right}
+#pageStyle1 .layui-laypage a{margin:0 0 5px 0}
+#pageStyle1 .layui-laypage span.layui-laypage-curr em{background:0 0;color:#1c1f21}
+#pageStyle1 .layui-laypage span.layui-laypage-curr{font-size:13px;font-weight:700;padding:0 10px;color:#1c1f21;height:28px;line-height:28px;border:0;background:0 0}
+#pageStyle1 .layui-laypage-default a{width:26px;height:26px;padding:0;text-align:center;border:0;font-size:13px;color:#82868d;background:0 0}
+#pageStyle1 .layui-laypage span{display:inline-block;vertical-align:middle;padding:0 0 0 20px;height:28px;line-height:28px;margin:0 0 5px 0;background-color:#f2f5f7;color:#82868d;font-size:12px}
+#pageStyle1 .layui-laypage span{border:0 solid #e2e2e2}
+#pageStyle1 .layui-laypage-default a.layui-laypage-next,#pageStyle1 .layui-laypage-default a.layui-laypage-prev{background-color:transparent;border:1px solid #d7d8d9;border-radius:2px;text-decoration:none;line-height:26px}
+#pageStyle1 .layui-laypage-default a.layui-laypage-next i,#pageStyle1 .layui-laypage-default a.layui-laypage-prev i{font-size:12px}
+#pageStyle1 .layui-laypage .layui-laypage-skip .layui-laypage-btn{color:#82868d;line-height:28px}
+#pageStyle1 .layui-laypage .layui-laypage-skip .layui-input{margin:0 6px;padding:0;min-width:56px;line-height:26px;color:#82868d}
+#pageStyle1 .layui-laypage span.layui-laypage-spr{width:26px;padding:0 0;text-align:center}

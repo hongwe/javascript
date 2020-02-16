@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="./static/js/layui/css/layui.css">
+    <link rel="stylesheet" href="./static/css/common.css">
+</head>
+
+<body class="layui-bgc2">
+
+    <div class="layui-wraper">
+        <!-- 头部 -->
+        <header class="layui-head">
+            <div class="layui-topnav">
+                <div class="layui-mainbox">
+                    <ul class="user-infor">
+                        <li><a href="javascript:void(0);">我的办公室</a></li>
+                        <li><a href="javascript:void(0);">帮助</a></li>
+                        <li><a href="javascript:void(0);">消息<span class="layui-badge-dot"></span></a></li>
+                        <li><a href="javascript:void(0);"><i class="icon-user"></i>张纯</a></li>
+                        <li><a href="javascript:void(0);">退出</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="layui-connav">
+                <div class="layui-mainbox">
+                    <div class="school-names">
+                        <div class="logo-img"><a class="layui-block" href="#"><img src="./static/images/newlogo.png"
+                                    alt="校本通"></a></div>
+                        <div class="sc-txt">河北省2015年中小学学校及幼儿园教师全员远程培训</div>
+                    </div>
+                    <div class="school-infor">
+                        <div class="school-infor-top mt20">
+                            <span class="ml20">角色：学员</span> <span class="ml20">学科：小学语文</span>
+                        </div>
+                        <div class="school-infor-bot mt14">
+                            <span class="fs14">我的研修圈</span> <a href="#"><span class="s-tags">小学语文工作坊</span></a> <a
+                                href="#"><span class="s-tags">土豪组</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-botnav">
+                <div class="menu-nav" id="menus-nav">
+                    <a href="#">研修活动</a>
+                    <a href="#">我的考核</a>
+                    <a href="#">研修规划</a>
+                    <a href="#">讨论区</a>
+                    <a href="#">公告</a>
+                    <a class="active" href="#">微能力测评</a>
+                    <a href="#">校本资源库</a>
+                    <a href="#">课程资源库</a>
+                    <a href="#">简报</a>
+                </div>
+            </div>
+        </header>
+        <!-- /头部 -->
+        <!-- 内容 -->
+        <main class="layui-mainbox">
+            <div class="layui-contbox clearfix">
+
+                <!-- 中间列表区域 -->
+                <div class="new-boxs">
+
+
+                    <!-- 组列表 -->
+                    <div class="box-line3-2 kaohe">
+                        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                            <ul class="layui-tab-title">
+                                <li class="layui-this">我的评测</li>
+                                <li class="">我的互评</li>
+
+                            </ul>
+
+                            <div class="layui-tab-content" style="padding-top:0 !important;">
+
+                                <div class="layui-tab-item layui-show">
+                                    <div class="h20 layui-bgc2"></div>
+
+                                    <div class="listcontent">
+                                        <ul>
+                                            <li class="hoverColor">
+                                                <div class="layui-col-md10">
+                                                    <h3>1.课程概述及预备知识</h3>
+                                                    <div class="piebox">
+                                                        <span class="fl layui-btn-t2">学习中</span>
+                                                        <span class="fl dates">将于 2019-05-01 12:00 开始</span>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md2">
+                                                    <a data-verb="进入" data-type="活动" target="_blank"
+                                                        class="layui-btn-s1 fr mt28" href="##" onclick="">进入活动</a>
+                                                </div>
+                                            </li>
+                                            <li class="hoverColor">
+                                                <div class="layui-col-md10">
+                                                    <h3>2.课程概述及预备知识</h3>
+                                                    <div class="piebox">
+                                                        <span class="fl layui-btn-t4">已完成</span>
+                                                        <span class="fl dates">将于 2019-05-01 12:00 开始</span>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md2">
+                                                    <a data-verb="进入" data-type="活动" target="_blank"
+                                                        class="layui-btn-s1 fr mt28" href="##" onclick="">进入活动</a>
+                                                </div>
+                                            </li>
+                                            <li class="hoverColor">
+                                                <div class="layui-col-md10">
+                                                    <h3>3.课程概述及预备知识</h3>
+                                                    <div class="piebox">
+                                                        <span class="fl layui-btn-t3">未学习</span>
+                                                        <span class="fl dates">将于 2019-05-01 12:00 开始</span>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-col-md2">
+                                                    <a data-verb="进入" data-type="活动" target="_blank"
+                                                        class="layui-btn-s1 fr mt28" href="##" onclick="">进入活动</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                                <div class="layui-tab-item">
+
+
+
+                                    <!-- 互评列表 -->
+                                    <div class="">
+                                        <div class="kaohe-listcontent">
+                                            <table class="layui-table" lay-even="" lay-skin="nob">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="200" class="bg1">作业名称</th>
+                                                        <th width="300" class="bg1">所属活动</th>
+                                                        <th width="282" class="bg1">活动起止日期</th>
+                                                        <th width="120" class="bg1">已点评</th>
+                                                        <th width="120" class="bg1">待点评</th>
+                                                        <th width="" class="bg1"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>提升微能力成果</td>
+                                                        <td>技术支持的学情分析微能力测评</td>
+                                                        <td>2017-10-10 到 2017-10-10</td>
+                                                        <td>3</td>
+                                                        <td>1</td>
+                                                        <td><a href="#" title="">去点评</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>提升微能力成果</td>
+                                                        <td>数字教育资源获取与评价能力测评</td>
+                                                        <td>2017-10-10 到 2017-10-10</td>
+                                                        <td>2</td>
+                                                        <td>3</td>
+                                                        <td><a href="#" title="">去点评</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>提升微能力成果</td>
+                                                        <td>数字教育资源管理能力测评</td>
+                                                        <td>2017-10-10 到 2017-10-10</td>
+                                                        <td>0</td>
+                                                        <td>2</td>
+                                                        <td><a href="#" title="">查看</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <!-- layui 插件分页 -->
+                                        <div id="pageStyle1" class="pageStyle1"></div>
+                                        <!-- /layui 分页 -->
+                                    </div>
+                                    <!-- 互评列表结束 -->
+                                     <!-- 作业点评列表 -->
+                                     <div class="">
+                                        <div class="huping-tips">已点评 <b>2</b> 份作业，还需点评 <b>2</b> 份作业，当前点评作业不足，稍后可以继续点评。
+                                        </div>
+                                        <div class="shaixuan-search box-line3 clearfix" style="padding:20px;">
+                                            <form class="layui-form" action="">
+                                                <div class="layui-input-inline" style="width:360px;">
+                                                    <label class="layui-form-label"
+                                                        style="padding:8px 0 0 0; width:auto;">选择项目阶段：</label>
+                                                    <div class="layui-input-block"
+                                                        style="margin-left:102px; width:240px;">
+
+                                                        <select name="quiz" lay-filter="test">
+                                                            <option value="第一阶段">第一阶段</option>
+                                                            <option value="第二阶段">第二阶段</option>
+                                                            <option value="第三阶段">第三阶段</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="layui-input-inline">
+                                                    <button type="button"
+                                                        class="layui-btn layui-btn-sm layui-btn-s1 ml15">筛选作业</button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="kaohe-listcontent">
+                                            <table class="layui-table" lay-even="" lay-skin="nob">
+                                                <thead>
+                                                    <tr>
+                                                        <th width="328" class="bg1">作业名称</th>
+                                                        <th width="244" class="bg1">提交人</th>
+                                                        <th width="282" class="bg1">提交时间</th>
+                                                        <th width="206" class="bg1">状态</th>
+                                                        <th width="120" class="bg1">提交时间</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>提升微能力成果</td>
+                                                        <td>张纯</td>
+                                                        <td>2019-06-01</td>
+                                                        <td>待点评</td>
+                                                        <td><a href="#" title="">去点评</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>提升微能力成果</td>
+                                                        <td>张纯</td>
+                                                        <td>2019-06-01</td>
+                                                        <td>待点评</td>
+                                                        <td><a href="#" title="">去点评</a></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>提升微能力成果</td>
+                                                        <td>张纯</td>
+                                                        <td>2019-06-01</td>
+                                                        <td>已点评</td>
+                                                        <td><a href="#" title="">查看</a></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <!-- layui 插件分页 -->
+                                        <div id="pageStyle2" class="pageStyle1"></div>
+                                        <!-- /layui 分页 -->
+
+                                    </div>
+                                    <!-- 作业点评列表结束 -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /组列表 -->
+
+                    </div>
+                    <!-- /中间列表区域 -->
+                </div>
+        </main>
+        <!-- /内容 -->
+        <!-- 底部 -->
+        <footer class="layui-foot">
+            <div class="layui-mainbox clearfix">
+                <div class="fl pt45">
+                    <p>联系电话：400-812-1228 &nbsp;&nbsp;|&nbsp;&nbsp; <span>联系邮箱：<a href="mailto:zx@teacher.com.cn"
+                                target="_blank">ZX@TEACHER.COM.CN</a></span></p>
+                    <p>版权所有：Copyright © 2020 &nbsp;&nbsp; 北京全通继教科技集团有限公司 &nbsp;&nbsp; 保留所有权力 &nbsp;&nbsp;|&nbsp;&nbsp;
+                        网站备案/经营许可证号：<a href="http://bj.beian.miit.gov.cn" target="_blank">京ICP备12012193号</a>
+                        &nbsp;&nbsp; <a href="http://bj.beian.miit.gov.cn" target="_blank">京ICP证041210号</a></p>
+                </div>
+                <div class="fr" style="width:90px; margin-right:20px;">
+                    <img class="weixin-code" src="http://s.teachercdn.com.cn/oel_teacherportal_static/images/erwei.png"
+                        alt="">
+                    <span class="weixin-title">全通继教网</span>
+                </div>
+            </div>
+        </footer>
+        <!-- /底部 -->
+    </div>
+
+
+    <ul class="layui-fixbar" id="scroll-to-top">
+        <li class="layui-icon layui-fixbar-top" lay-type="top" style="display:list-item;"><i
+                class="layui-icon layui-icon-up"></i></li>
+    </ul>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="./static/js/layui/layui.js"></script>
+    <script src="./static/js/global.js"></script>
+    <script>
+        layui.use(['layer', 'form', 'element', 'carousel', 'util', 'common', 'laypage'], function () {
+            var $ = layui.$,
+                layer = layui.layer,
+                element = layui.element,
+                carousel = layui.carousel,
+                form = layer.form,
+                util = layui.util,
+                common = layui.common,
+                laypage = layui.laypage;
+
+            var objHome = {
+                bindEvent: function () {
+                    //这个方法加载初始需要调用的方法等代码
+                    //例如：$("xxx").on("click",function(){……})
+                    console.log("我第一个加载出来你们谁有意见！！！");
+
+
+                },
+                goTotop: function () {
+                    //输出公共js中的全局变量
+                    console.log($win, $body, $body_html);
+                }
+
+
+
+            };
+
+
+            //初始化加载
+            var pageLoaded = function () {
+                objHome.bindEvent();
+                objHome.goTotop();
+                //common.goTotop();
+            }
+            pageLoaded();
+
+
+
+
+            laypage.render({
+                elem: 'pageStyle1' //注意，这里的 test1 是 ID，不用加 # 号
+                , count: 300 //数据总数，从服务端得到
+                , groups: 5
+                , prev: '<i class="layui-icon layui-icon-left"></i>'
+                , next: '<i class="layui-icon layui-icon-right"></i>'
+                , layout: ['prev', 'page', 'next', 'count', 'limit', 'skip']
+                , limits: [10, 25, 50]
+                , jump: function (obj, first) {
+                    //obj包含了当前分页的所有参数，比如：
+                    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+                    console.log(obj.limit); //得到每页显示的条数
+
+                    //首次不执行
+                    if (!first) {
+                        //do something
+                    }
+                }
+            });
+
+            laypage.render({
+                elem: 'pageStyle2' //注意，这里的 test1 是 ID，不用加 # 号
+                , count: 300 //数据总数，从服务端得到
+                , groups: 5
+                , prev: '<i class="layui-icon layui-icon-left"></i>'
+                , next: '<i class="layui-icon layui-icon-right"></i>'
+                , layout: ['prev', 'page', 'next', 'count', 'limit', 'skip']
+                , limits: [10, 25, 50]
+                , jump: function (obj, first) {
+                    //obj包含了当前分页的所有参数，比如：
+                    console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+                    console.log(obj.limit); //得到每页显示的条数
+
+                    //首次不执行
+                    if (!first) {
+                        //do something
+                    }
+                }
+            });
+
+        });
+    </script>
+
+    <script>
+        layui.use(['form', 'layedit'], function () {
+            var form = layui.form;
+
+
+            form.on('select(test)', function (data) {
+                console.log(data.elem); //得到select原始DOM对象
+                console.log(data.value); //得到被选中的值
+                console.log(data.othis); //得到美化后的DOM对象
+            });
+
+
+
+
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>

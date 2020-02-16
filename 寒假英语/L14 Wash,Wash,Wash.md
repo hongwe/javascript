@@ -42,3 +42,4 @@
     What is that?
     A little blue bird.
 
+![](D:\github\javascript\寒假英语\l14.jpg)

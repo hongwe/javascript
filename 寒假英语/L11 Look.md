@@ -23,3 +23,6 @@
 
     Yay!
     I'm ready to go!
+
+
+![](D:\github\javascript\寒假英语\l11.jpg)

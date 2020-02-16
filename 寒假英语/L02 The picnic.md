@@ -35,3 +35,4 @@
     Oh, say good night.
     Good night!
     Let's go to bed.
+![](D:\github\javascript\寒假英语\l2.jpg)

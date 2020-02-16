@@ -24,3 +24,5 @@
 
     Cramp. Cramp.
     Look at that!
+
+![](D:\github\javascript\寒假英语\l5.jpg)
