@@ -122,10 +122,16 @@ console.log(str); //=>music,movie,eat,sport
 
  */
 
-let str = '珠峰@培训@扬帆@起航';
+/* let str = '珠峰@培训@扬帆@起航';
 str = str.replace('@', '-');
 
 console.log(str); //=>珠峰-培训@扬帆@起航  //=>在不使用正则表达式情况下,执行一次replace只能替换一次字符
 
 str = str.replace(/@/g, '-');
 console.log(str);
+ */
+
+var a = 1;
+console.log(a);
+
+var a = 2;
