@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+<head> 
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" /> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>Hello, World</title> 
+<style type="text/css"> 
+html{height:100%} 
+body{height:100%;margin:0px;padding:0px} 
+#container{height:100%} 
+</style> 
+
+
+
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Ke4qTNgOCGwBsY5P1tWyifuekGFyGN6y"></script>
+<script type="text/javascript">
+    //获取当前位置
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == BMAP_STATUS_SUCCESS){
+            mk = new BMap.Marker(r.point);
+            getAddress(r.point);
+        }else {
+            alert('failed'+this.getStatus());
+        }
+    });
+    //获取地址信息，设置地址label
+    function getAddress(point){
+        var gc = new BMap.Geocoder();
+        gc.getLocation(point, function(rs){
+            var addComp = rs.addressComponents;
+            var address =  addComp.province +  addComp.city + addComp.district + addComp.street + addComp.streetNumber;//获取地址
+            console.log(address);
+        });
+
+    }
+</script>
+
+</head> 
+  
+<body> 
+<div id="container"></div>
+<script>
+    getCurrentPosition
+</script>
+</body> 
+</html>

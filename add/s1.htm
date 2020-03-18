@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script
+            type="text/javascript"
+            src="http://api.map.baidu.com/api?v=3.0&ak=Ke4qTNgOCGwBsY5P1tWyifuekGFyGN6y"
+        ></script>
+        <title>Baidu Map</title>
+        <style type="text/css">
+            html {
+                height: 100%;
+            }
+            body {
+                height: 100%;
+                margin: 0px;
+                padding: 0px;
+            }
+            #container {
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var map = new BMap.Map('container'); // 创建地图实例
+            var point = new BMap.Point(116.404, 39.915); // 创建点坐标
+            map.centerAndZoom(point, 15);
+        </script>
+    </body>
+</html>
