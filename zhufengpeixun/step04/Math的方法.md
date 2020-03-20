@@ -110,7 +110,7 @@ for (let i = 0; i < 10; i++) {
     1. 包含 n 也包含 m
     2. n < m
 
-    > Math.round(Math.randow()\*(m-n)+n)
+    > Math.round(Math.random()\*(m-n)+n)
 
 ```javascript
 for (let i = 1; i <= 100; i++) {

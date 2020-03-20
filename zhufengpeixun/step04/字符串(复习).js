@@ -4,7 +4,7 @@ let str = 'zhifengpeixunyangfanqihang';
 for (let i = 0; i < str.length; i++) {
     let char = str[i];
     console.log(char);
-} */
+}  */
 
 /* 
     charAt:根据索引获取指定位置的字符
@@ -17,13 +17,13 @@ for (let i = 0; i < str.length; i++) {
 */
 /* let str = 'zhifengpeixunyangfanqihang';
 console.log(str.charAt(0)); //=>'z'
-console.log(str[0]); //=>'z'
+console.log(str[1]); //=>'z'
 console.log(str.charAt(10000)); //=>''
 console.log(str[10000]); //=>'undefined'
 
 console.log(str.charCodeAt(0)); //=>'122'
 console.log(str.charCodeAt(10000)); //=>'NaN'
-console.log(String.fromCharCode(122)); //=>'z' */
+console.log(String.fromCharCode(122)); //=>'z'  */
 
 /* 
 
@@ -35,8 +35,8 @@ substr  /  substring  /slice
     slice(n,m):和substring一样，都是找到索引为m处，但是slice可以支持负数作为索引，其余两个方法不可以
 
 
-*/
-/* let str = 'zhifengpeixunyangfanqihang';
+/* 
+ let str = 'zhifengpeixunyangfanqihang';
 console.log(str.substr(3, 7)); //=>'fengpei'
 console.log(str.substr(3)); //=>'fengpeixunyangfanqihang' 截取到末尾
 console.log(str.substring(3, 7)); //=>'feng'
@@ -45,10 +45,11 @@ console.log(str.substring(3, 10000)); //=>'fengpeixunyangfanqihang'  截取到�
 console.log(str.substring(3, 7)); //=>'feng'
 console.log(str.slice(3, 7)); //=>'feng'
 console.log(str.substring(-7, -3)); //=>'' substring不支持负数索引
-console.log(str.slice(-7, -3)); //=>'nqih' slice支持负数索引，快捷查找：负数索引，我们可以展昭 str。length+负索引 的发放查找  => slice(26-7,26-3) => slice(19,23) */
+console.log(str.slice(-7, -3)); //=>'nqih' slice支持负数索引，快捷查找：负数索引，我们可以展昭 str。length+负索引 的发放查找  => slice(26-7,26-3) => slice(19,23) 
+ */
 
-/* 
 
+/*
 indexOf  /  lastIndexOf  /  includes
     验证字符是否存在
 
@@ -144,3 +145,5 @@ console.log(str);
 
 
 // console.log(str);
+
+
