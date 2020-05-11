@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <button type="button" id="btn1">按钮</button>
+        <div id="div2">鼠标经过出现按钮</div>
+        <button type="button" id="btn2">按钮</button>
+        <div id="div3">函数 鼠标经过这个div执行变窄变高变色 移出再恢复</div>
+        <script>
+            //1、说明事件
+            var btn1 = document.getElementById('btn1');
+
+            function pop() {
+                alert('弹出窗口');
+            }
+            btn1.onclick = pop;
+
+            /*        
+            button.onclick = Function("alert('hello');");
+            button.onclick = function () {
+                alert('hello');
+            };
+            button.onclick = myAlert;
+
+            function myAlert() {
+                alert('hello');
+            } */
+
+            //2.移入移出
+            var btn2 = document.getElementById('btn2');
+            var div2 = document.getElementById('div2');
+            function hideShow() {
+                if (btn2.style.display == 'block' || btn2.style.display == '') {
+                    btn2.style.display = 'none';
+                } else {
+                    btn2.style.display = 'block';
+                }
+            }
+            div2.onmouseover = hideShow;
+            div2.onmouseout = hideShow;
+
+            //3.函数 鼠标经过这个div执行变窄变高变色 移出再恢复
+            var div3 = document.getElementById('div3');
+            function chColorHeight() {
+                console.log(this.style);
+                this.style.background = 'red';
+                this.style.height = 100 + 'px';
+            }
+            function clearColorHeight() {
+                div3.style.background = '';
+                div3.style.height = '';
+            }
+            div3.onmouseover = chColorHeight;
+            div3.onmouseout = clearColorHeight;
+        </script>
+    </body>
+</html>

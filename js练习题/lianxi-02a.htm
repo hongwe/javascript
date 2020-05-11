@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- <button type="button" id="btn1">按钮</button> -->
+
+        <!-- /*
+        为抵抗洪水，战士连续作战89小时，编程计算共多少天零多少小时？
+        25h = 1天1小时
+        48h = 2天
+
+        一天24小时
+     */ -->
+
+        <!--   <script>
+            var hour = 89;
+            var yHour = hour % 24;
+            var yDay = Math.floor(hour / 24);
+            alert('为抵抗洪水，战士连续作战'+yDay+'天零'+yHour+'小时')
+        </script>
+ -->
+        <!-- /*
+			一个引号引发的公司倒闭
+			老王：5000 = 2000 + 绩效3000
+			小李：3000 = 2000 + 绩效1000
+			小明：2000 = 2000 + 绩效0
+			小谢：6000 = 2000 + 绩效4000
+
+
+			字符串转数字：
+				parseInt() => 整数
+				parseFloat() => 保留小数
+				数字.toFixed(2) => 保留2位小数
+		 */ -->
+
+        <!-- 
+<script>
+    	var wang = 2000 + 3000;
+		var li = 2000 + parseFloat('1000.5');//'20001000'
+		var ming = 2000 + 0;
+		var xie = 2000 + 4000;
+
+		var total = wang + li + ming + xie;
+		alert(total.toFixed(2));
+</script>
+
+-->
+
+        <!-- 
+    /*
+			思路：
+			1.生成1-100随机数
+				Math.random()：得到一个0-1但不包括1的数字
+			2.点击按钮时判断输入的数字与随机数的关系
+				* 定义一个函数
+				* 获取输入的值
+				* 判断
+		 */
+ -->
+        <!--   <input type="text" id="num" value="" />
+        <button type="button" id="btn1">按钮</button> 
+        <script>
+            var num = document.getElementById('num');
+            var btn = document.getElementById('btn1');
+           
+     
+            function comBS() {
+                var _num = num.value;
+                var r1 = parseInt(Math.random() * 100);
+                console.log(_num,r1)
+                if (_num > r1) {
+                    console.log('大了');
+                } else if (_num < r1) {
+                    console.log('小了');
+                } else {
+                    console.log('正好');
+                }
+            }
+            btn.onclick = comBS;
+        </script> -->
+
+        <input type="text" value="" id="n1" />
+        <select id="f1">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" value="" id="n2" />
+        <input type="text" value="" id="n3" />
+        <button type="button" id="btn">计算</button>
+        <script>
+            var num1 = document.getElementById('n1'),
+                num2 = document.getElementById('n2'),
+                num3 = document.getElementById('n3'),
+                f1 = document.getElementById('f1'),
+                btn = document.getElementById('btn');
+            btn.onclick = function () {
+                // if (f1.value == '+') {
+                //     num3.value = num1.value + num2.value;
+                // } else if (f1.value == '-') {
+                //     num3.value = num1.value - num2.value;
+                // } else if (f1.value == '*') {
+                //     num3.value = num1.value * num2.value;
+                // } else {
+                //     num3.value = num1.value / num2.value;
+                // }
+
+                num3.value = num1.value + f1.value + num2.value
+            
+                console.log(num1.value, f1.value, num2.value, num3.value);
+            };
+        </script>
+    </body>
+</html>

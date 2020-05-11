@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>05成绩判定</title>
+    </head>
+    <body>
+        <!--       <input type="text" id="score" />
+        <button onclick="check()">判定成绩</button>
+        <div id="output"></div> -->
+
+        <div id="dd"></div>
+        <button id="btn">判定成绩</button>
+        <script>
+            /*
+                    打印100以内 7的倍数
+                           对7求余如果为0，就7的倍数
+
+                 */
+            /*  let ary = [];
+                       let index = 0;
+                       for (let i = 1; i <= 50; i++) {
+                           if (i % 7 ==0) {
+
+                               ary[index] = i;
+                               index++
+                           }
+                       }
+                       console.log(ary)
+
+            */
+
+            // for (let i = 1; i <= 50; i++) {
+            //     if (i % 7 ==0) {
+
+            //         console.log(i);
+
+            //     }
+            // }
+            // 入职薪水10K，每年涨幅5%，50年后工资多少？
+            // var num = 10000;
+            // for( let i = 0; i < 50; i++){
+            //     num += num*0.05;
+            // }
+            // console.log(num)
+
+            // 打印100–200之间所有能被3或者7整除的数j
+
+            //打印99乘法表
+            // for (let i = 1; i <= 9; i++) {
+            //     for (let j = 1; j <= 9; j++) {
+            //         console.log(i + '*' + j + '=' + i * j);
+            //     }
+            // }
+
+            // 岳父的套路：
+            //    var num = 1
+            //    var sum = 1
+
+            //     for( let i = 2; i <= 28; i++){
+            //         num = 2*num
+            //         sum += num
+            //     }
+            //     console.log(num/100,sum/100)
+
+            // 随机点名
+            var arr = [
+                '何国荣',
+                '黄耀华',
+                '司徒健伟',
+                '洪斌',
+                '黄博霖',
+                '肖清琳',
+                '杜凡',
+                '方洋',
+                '顾伟淘',
+                '胡子荣',
+                '谢孟宁',
+                '蒋涛',
+                '陈志权',
+                '谢霖辉',
+                '谢坤裕',
+                '梁喜龙',
+                '雷燕豪',
+                '江启民',
+                '胡泽浩',
+            ];
+
+            var odiv = document.getElementById('dd');
+            var obtn = document.getElementById('btn');
+            var rName = null;
+
+            var tt = setInterval(function () {
+                rName = arr[Math.floor(Math.random() * (arr.length - 1)) + 1];
+                document.getElementById('dd').innerText = rName;
+            }, 50);
+
+            function cT() {
+                clearInterval(tt);
+            }
+
+            obtn.onclick=cT;
+        </script>
+    </body>
+</html>
