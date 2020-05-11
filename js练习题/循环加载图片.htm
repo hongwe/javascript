@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <style>
+        .a1 .a,
+        .b1 .b,
+        .c1 .c,
+        .d1 .d {
+            display: none;
+        }
+    </style>
+    <body>
+        <div id="box"></div>
+
+        <script>
+            function hide(num, arr1, arr2, arr3, arr4) {
+                let box = document.getElementById('box');
+                for (let j = 1; j <= num; j++) {
+                    j < 10 ? (i = '00' + j) : j < 100 ? (i = '0' + j) : (i = j);
+
+                    box.innerHTML +=
+                        '<div class="item" data-item = "' +
+                        i +
+                        '">' +
+                        '<div class="a"><img src="a/' +
+                        i +
+                        '.png"/></div>' +
+                        '<div class="b"><img src="b/' +
+                        i +
+                        '.png"/></div>' +
+                        '<div class="c"><img src="c/' +
+                        i +
+                        '.png"/></div>' +
+                        '<div class="d"><img src="d/' +
+                        i +
+                        '.png"/></div>' +
+                        '</div>';
+                }
+
+                disNo(arr1, 'a1');
+                disNo(arr2, 'b1');
+                disNo(arr3, 'c1');
+                disNo(arr4, 'd1');
+            }
+            function disNo(arr, css) {
+                for (let i = 0; i < arr.length; i++) {
+                    let index = arr[i] - 1;
+                    document.querySelectorAll('.item')[index].className +=
+                        ' ' + css;
+                }
+            }
+
+            hide(
+                10, //总数
+                [1, 2, 3, 4, 5, 6, 7],
+                [2, 3], //a类没有的页码 //b类没有b的页码
+                [3, 4], //c类没有的页码
+                [7, 8] //d类没有的页码
+            );
+        </script>
+    </body>
+</html>

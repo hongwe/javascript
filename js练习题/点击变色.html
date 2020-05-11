@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                border: 1px solid #ddd;
+            }
+        </style>
+        <button type="button" >变色</button>
+        <div></div>
+        <script>
+            let arrC = ['#000', '#ddd', '#aaa', '#000','red'];
+            let btn = document.querySelector('button');
+            let div = document.querySelector('div');
+            var i = 0;
+          function change(arr) {
+                console.log(i)
+                div.style.background = arr[i];
+                i++;
+                i > arr.length - 1 ? (i = 0) : null
+                console.log(div.style.background)
+               return x = div.style.background
+            }
+            function color(){
+                change(arrC);
+                div.style.background = x
+            }
+            
+            //btn.onclick = function(){change(arrC) }
+            btn.onclick = color ;
+
+            //btn.onclick = change.call(change, arrC);
+           
+          
+        </script>
+    </body>
+</html>
