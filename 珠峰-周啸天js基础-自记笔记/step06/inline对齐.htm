@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="1.css">
+        <link rel="stylesheet" href="2.css">
+        <link rel="stylesheet" href="3.css">
+        <style>
+            .wrap {
+                border: 1px solid red;
+                background-color: aqua;
+                height: 50px;
+            }
+            img {
+                display: inline-block;
+            }
+            span {
+                display: inline-block;
+                background-color: black;
+                color: #fff;
+                line-height: 14px;
+            }
+            .in {
+                display: inline-block;
+                background-color: black;
+                width: 50px;
+                height: 50px;
+                vertical-align: baseline;
+            }
+            /* 
+            vertical-align: baseline;
+　　　　　　vertical-align: sub;
+　　　　　　vertical-align: super;
+　　　　　　vertical-align: text-top;
+　　　　　　vertical-align: text-bottom;
+　　　　　　vertical-align: middle;
+　　　　　　vertical-align: top;
+　　　　　　vertical-align: bottom; 
+*/
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            我
+            <div class="in"></div>
+            <div class="in">1</div>
+        </div>
+        <video></video>
+        <script>
+            // if (document.fullscreenElement.nodeName == 'VIDEO') {
+            //     console.log('全屏播放视频');
+            // } else {
+            //     console.log('没播放视频');
+            // }
+            var links = document.links;
+            for (var i = 0; i < links.length; i++) {
+                console.log(links[i]);
+            }
+        </script>
+    </body>
+</html>

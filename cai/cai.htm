@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Document</title>
+    </head>
+    <body>
+        <!--根据方法创建一个div盒子模型-->
+        <div id="project-list"></div>
+        <script
+            src="jquery.min.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script type="text/javascript">
+            notice();
+            function notice() {
+                // 要注意传入的路径
+                $.ajax('cai.json', {
+                    data: {},
+                    dataType: 'json',
+                    type: 'get',
+                    async: 'false',
+                    success: function (data) {
+                        var listdata = data.list; //列表数据
+                        if (listdata.length > 0) {
+                            //项目列表
+                            var listInfo = '';
+                            $.each(listdata, function () {
+                                listInfo +=
+                                    "<li class='mui-table-view-cell mui-media'>" +
+                                    "<img class='mui-media-object mui-pull-left project-img' src=" +
+                                    this.project_img +
+                                    '>' +
+                                    "<div class='mui-media-body'>" +
+                                    "<h3 class='project-name'>" +
+                                    this.project_name +
+                                    '</h3>' +
+                                    "<p class='money-range' class='mui-ellipsis loan-range'>" +
+                                    this.money_range +
+                                    '</p>' +
+                                    "<p class='loan-rate'>每日百分比" +
+                                    this.day_rate +
+                                    '%，应该为' +
+                                    this.day_limit +
+                                    '天，' +
+                                    this.day_person +
+                                    '人已交' +
+                                    '</p>' +
+                                    '</div>' +
+                                    "<div class='loan-more'>" +
+                                    '<a href=' +
+                                    this.button_info +
+                                    " target='' ><button>详情</button></a>" +
+                                    '</div>' +
+                                    '</li>';
+                            });
+
+                            $('#project-list')[0].innerHTML = listInfo;
+                        }
+                    },
+                    // error:function(xhr,type,errorThrown){
+                    // alert("系统繁忙，请联系管理员");
+                    // }
+                });
+            }
+        </script>
+    </body>
+</html>

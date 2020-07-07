@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <iframe src="p1.htm" frameborder="0" name="c1"></iframe>
+        <iframe src="p3.htm" frameborder="0" name="c2"></iframe>
+
+        <div>
+            <a href="p2.htm" target="c1" onclick="changeUrl()">链接</a>
+        </div>
+    </body>
+    <script>
+        function changeUrl() {
+            document.getElementsByName('c2')[0].src='p4.htm'
+        }
+    </script>
+</html>

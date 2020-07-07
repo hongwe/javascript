@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+        }
+        .box1 {
+            width: 300px;
+            height: 300px;
+            margin: 100px;
+            background: #333;
+            overflow: hidden;
+            position: relative;
+            border: 10px solid #fff;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            margin: 100px;
+            background: #666;
+            overflow: hidden;
+            position: relative;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            background: #999;
+            border: 10px solid #fff;
+        }
+            /* border: 10px solid #fff; */
+        }
+    </style>
+    <div class="box1">
+        <div class="box2">
+            <div class="box3"></div>
+        </div>
+    </div>
+    <script>
+        var oBox1 = document.querySelector('.box1');
+        var oBox2 = document.querySelector('.box2');
+        var oBox3 = document.querySelector('.box3');
+        // console.log('box1: ' + oBox1.offsetWidth + ',' + oBox1.offsetHeight)
+        // console.log('box2: ' + oBox2.offsetWidth + ',' + oBox2.offsetHeight)
+        // console.log('box3: ' + oBox3.offsetWidth + ',' + oBox3.offsetHeight)Width
+
+        // console.log('box1: ' + oBox1.clientWidth + ',' + oBox1.clientHeight)
+        // console.log('box2: ' + oBox2.clientWidth + ',' + oBox2.clientHeight)
+        // console.log('box3: ' + oBox3.clientWidth + ',' + oBox3.clientHeight)
+
+        // console.log('box1: ' + oBox1.scrollWidth + ',' + oBox1.scrollHeight)
+        // console.log('box2: ' + oBox2.scrollWidth + ',' + oBox2.scrollHeight)
+        // console.log('box3: ' + oBox3.scrollWidth + ',' + oBox3.scrollHeight)
+
+        console.log('box1: ' + oBox1.offsetLeft + ',' + oBox1.offsetTop)
+        console.log('box2: ' + oBox2.offsetLeft + ',' + oBox2.offsetTop)
+        console.log('box3: ' + oBox3.offsetLeft + ',' + oBox3.offsetTop)
+
+        console.log('box1: ' + oBox1.clientLeft + ',' + oBox1.clientTop)
+        console.log('box2: ' + oBox2.clientLeft + ',' + oBox2.clientTop)
+        console.log('box3: ' + oBox3.clientLeft + ',' + oBox3.clientTop)
+
+        console.log('box1: ' + oBox1.scrollLeft + ',' + oBox1.scrollTop)
+        console.log('box2: ' + oBox2.scrollLeft + ',' + oBox2.scrollTop)
+        console.log('box3: ' + oBox3.scrollLeft + ',' + oBox3.scrollTop)
+
+        // console.log('box1: ' + oBox1.offsetLeft + ',' + oBox1.offsetTop);
+        // console.log('box2: ' + oBox2.offsetLeft + ',' + oBox2.offsetTop);
+        // console.log('box3: ' + oBox3.offsetLeft + ',' + oBox3.offsetTop);
+    </script>
+</body>
+</html>
+
+
+
+

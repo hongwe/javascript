@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Document</title>
+    </head>
+    <style>
+        #table4 {
+            border: 1px solid red;
+        }
+        #table4 td {
+            line-height: 20px;
+            height: 20px;
+            width: 50px;
+            border: 1px solid red;
+        }
+        .redstar {
+            position: relative;
+        }
+        .redstar::after {
+            content: '*';
+            color: red;
+            display: inline-block;
+            margin-right: 5px;
+            vertical-align: middle;
+            
+        }
+        .tr {
+            text-align: right;
+        }
+    </style>
+    <body>
+        <div class="tr">
+            <label for="" class=""
+                ><span class="redstar"></span>你好</label
+            >
+        </div>
+        <div class="tr">
+            <label for="" class=""
+                ><span class="redstar"></span>你好你好</label
+            >
+        </div>
+        <div class="tr">
+            <label for="" class=""
+                ><span class="redstar"></span>你好你好你好</label
+            >
+        </div>
+        <h3>1.1-100奇数的和</h3>
+        span
+        <div id="div1"></div>
+        <h3>
+            2.本金10000元存入银行，年利率是千分之三，每过1年，将本金和利息相加作为新的本金。计算5年后，获得的本金是多少？
+        </h3>
+        <div id="div2"></div>
+
+        <h3>
+            一年之内一对兔子能繁殖多少对？
+            于是就筑了一道围墙把一对兔子关在里面。
+            已知一对兔子每个月可以生一对小兔子，
+            而一对兔子从出生后第3个月起每月生一对小兔子。
+            假如一年内没有发生死亡现象，
+            那么，一对兔子一年内（12个月）能繁殖成多少对？
+        </h3>
+        <div id="div3"></div>
+
+        <div>
+            <label class="redstar">项目</label>
+            <input type="text" value="3" id="inputA" />
+            <input type="text" value="3" id="inputB" />
+            <button type="button" id="btn4">生成表格</button>
+            <table id="table4"></table>
+        </div>
+    </body>
+    <script src="循环.js"></script>
+</html>

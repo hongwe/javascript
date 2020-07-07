@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>41函数</title>
+        <!-- import css -->
+    </head>
+    <body>
+        <button type="botton" id="btn">总和计算</button>
+        <div id="div">0</div>
+        <!-- import js -->
+        <script>
+            /*
+                        1.创建函数
+                         function 函数名(形参1,...){
+                            //=>函数体:实现具体功能得代码
+                        }
+                        2.执行函数
+                        函数名(实参1,...)
+                        函数名(实参1,...)
+                        ...
+
+                        */
+
+            var btn = document.getElementById('btn');
+            var div = document.getElementById('div');
+            // function sum() {
+            //     var totle = null;
+            //     for (var i = 0; i < arguments.length; i++) {
+            //         totle += arguments[i];
+            //     }
+            //     return totle;
+            // }
+
+            /* function getNum() {
+                            var num = 1;
+
+                            return function () {
+                                num++;
+                                console.log(num);
+                            };
+                        }
+             */
+
+            /*  function init() {
+                var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+                function displayName() { // displayName() 是内部函数，一个闭包
+                    alert(name); // 使用了父函数中声明的变量
+                }
+                displayName();
+            }
+            init(); */
+
+            // function getNum() {
+            //     var num = 1;
+
+            //     var nn = function add() {
+            //         num++;
+            //         return num;
+            //         console.log(num)
+            //     };
+            //     nn;
+            //     console.log(nn)
+            //    return nn
+            // }
+
+          /*   var bb = (function () {
+                var a = 0;
+                return function fn() {
+                    a++;
+                    div.innerText = a;
+                };
+            })(); */
+
+
+            function fn() {
+                var a = 0;
+                return function () {
+                    a++;
+                    div.innerText = a;
+                };
+            };
+            var bb = fn()
+
+            btn.onclick = function () {
+                bb();
+            };
+            //             function init() {
+            //     var name = "Mozilla"; // name 是一个被 init 创建的局部变量
+            //     function displayName() { // displayName() 是内部函数，一个闭包
+            //         alert(name); // 使用了父函数中声明的变量
+            //     }
+            //     displayName();
+            // }
+            // init();
+            /*
+                        var count = 0;
+                        function addCount() {
+                            count++;
+                            console.log(count);
+                        }
+                        document.body.addEventListener('click', addCount); */
+        </script>
+    </body>
+</html>

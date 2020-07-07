@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            /*  function a() {
+                            var user = '追梦子';
+                            console.log(this.user); //undefined
+                            console.log(this); //Window
+                        }
+                        a(); */
+
+            /*             function a(){
+                var user = "追梦子";
+                console.log(this.user); //undefined
+                console.log(this);　　//Window
+            }
+            window.a(); */
+
+            /*     var o = {
+                            user: '追梦子',
+                            fn: function () {
+                                console.log(this.user); //追梦子
+                            },
+                        };
+                        o.fn(); */
+
+            /* var o = {
+                            a: 10,
+                            b: {
+                                a: 12,
+                                fn: function () {
+                                    console.log(this.a); //12
+                                },
+                            },
+                        };
+                        o.b.fn(); */
+
+            //             var o = {
+            //     a:10,
+            //     b:{
+            //         // a:12,
+            //         fn:function(){
+            //             console.log(this.a); //undefined
+            //         }
+            //     }
+            // }
+            // o.b.fn();
+
+            /*     var obj = { name: '王', age: 6 };
+                        var ary1 = [1,2,3];
+                        var fn =function(){console.log(1)}
+                        var t1 = obj.toString()
+                        var t1a = JSON.stringify(obj)
+                        var t1b = JSON.parse(t1a)
+                        var t2 = ary1.toString()
+                        var t2a = ary1.join()
+                        var t2c = JSON.stringify(ary1)
+                        var t3 = fn.toString()
+                        console.log(t1)
+                        console.log(t1a)
+                        console.log(t1b)
+                        console.log(t2)
+                        console.log(t2a)
+                        console.log(t2c)
+                        console.log(t3) */
+
+            // function getBlank() {
+            //     var str = '  h t m l 5 c s s 3';
+            //     var reg = /\s+/g;
+            //     // var reg2 = new RegExp('\\s+', 'g');
+
+            //     str = str.replace(reg, '');
+            //     console.log(str);
+            // }
+            // getBlank();
+
+            // var ary = [1, 2, 3, 1, 2, 3, 3, 4, 5];
+            // var newAry = [];
+            // for (var i = 0; i < ary.length; i++) {
+            //     var item = ary[i];
+
+            //     if (newAry.includes(item)) {
+            //         continue;
+            //     }
+            //     newAry.push(item);
+            // }
+            // console.log(newAry);
+
+            let ary = [
+                1,
+                2,
+                3,
+                1,
+                2,
+                1,
+                2,
+                3,
+                2,
+                1,
+                2,
+                3,
+                5,
+                6,
+                5,
+                6,
+                'a',
+                'fn',
+                null,
+            ];
+
+            // let obj = {};
+
+            // for (var i = 0; i < ary.length; i++) {
+            //     var item = ary[i];
+
+            //     // if (obj[item] !== undefined) {
+            //     //     ary.splice(i, 1);
+            //     //     //数组塌陷问题 i--
+            //     //     i--;
+            //     //     //已经存在这一项
+            //     //     continue;
+            //     // }
+            //     obj[item] = item;
+            // }
+
+            // var newAry = [];
+            // for (let key in obj) {
+            //     console.log(key)
+            //     newAry.push(obj[key]);
+            // }
+            // console.log(obj, ary, newAry);
+
+            
+        </script>
+    </body>
+</html>

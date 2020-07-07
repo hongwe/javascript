@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: brown;
+                color: #fff;
+                margin: 20px;
+                float: left;
+                transition: 2s;
+            }
+            .rotate:hover {
+                transform: rotate(45deg);
+                -ms-transform: rotate(45deg); /* IE 9 */
+                -webkit-transform: rotate(45deg); /* Safari and Chrome */
+            }
+            .rotateX:hover {
+                -webkit-transform: rotateX(45deg);
+                transform: rotateX(45deg);
+            }
+            .rotateY:hover {
+                -webkit-transform: rotateY(45deg);
+                transform: rotateY(45deg);
+            }
+
+            .rotateZ:hover {
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+
+            .scale:hover {
+                -webkit-transform: scale(2, 2);
+                transform: scale(2, 2);
+            }
+
+            .scaleX:hover {
+                -webkit-transform: scaleX(2);
+                transform: scaleX(2);
+            }
+
+            .scaleY:hover {
+                -webkit-transform: scaleY(2);
+                transform: scaleY(2);
+            }
+
+            .skew:hover {
+                -webkit-transform: skew(45deg, 45deg);
+                transform: skew(45deg, 45deg);
+            }
+
+            .skewX:hover {
+                -webkit-transform: skewX(45deg);
+                transform: skewX(45deg);
+            }
+
+            .skewY:hover {
+                -webkit-transform: skewY(45deg);
+                transform: skewY(45deg);
+            }
+
+            .translate:hover {
+                -webkit-transform: translate(45px, 1em);
+                transform: translate(45px, 1em);
+            }
+
+            .translateX:hover {
+                -webkit-transform: translateX(45px);
+                transform: translateX(45px);
+            }
+
+            .translateY:hover {
+                -webkit-transform: translateY(45px);
+                transform: translateY(45px);
+            }
+
+            .matrix:hover {
+                -webkit-transform: matrix(2, 2, 0, 2, 45, 0);
+                transform: matrix(2, 2, 0, 2, 45, 0);
+            }
+
+
+            .triangle {
+    /* 基础样式 */
+    border: solid 10px transparent;
+    border-radius: 10px;
+    width: 0; height: 0;;
+}
+/*下*/
+.triangle.bottom {
+    border-top-color: green;
+}
+/*上*/
+.triangle.top {
+    border-bottom-color: green;
+}
+/*左*/
+.triangle.top {
+    border-right-color: green;
+}
+/*右*/
+.triangle.top {
+    border-left-color: green;
+}
+        </style>
+
+        <div class="box rotate">案例1: transform: rotate(45deg)</div>
+        <div class="box rotateX">案例2: transform: rotateX(45deg)</div>
+        <div class="box rotateY">案例3: transform: rotateY(45deg)</div>
+        <div class="box rotateZ">案例4: transform: rotateY(45deg)</div>
+        <div class="box scale">案例5: transform: scale(2, 2);</div>
+        <div class="box scaleX">案例6: transform: scaleX(2);;</div>
+        <div class="box scaleY">案例7: transform: scaleY(2);</div>
+        <div class="box skew">案例8: transform: skew(45deg, 45deg);</div>
+        <div class="box skewX">案例9: transform: skewX(45deg)</div>
+        <div class="box skewY">案例10: transform: skewY(45deg)</div>
+        <div class="box translate">案例11: transform: translate(45px, 1em)</div>
+        <div class="box translateX">案例12: transform: translateX(45px)</div>
+        <div class="box translateY">案例13: transform: translateY(45px)</div>
+        <div class="box matrix">案例14: transform: matrix(2, 2, 0, 2, 45, 0);</div>
+        <div class="triangle bottom">1</div>
+    </body>
+</html>

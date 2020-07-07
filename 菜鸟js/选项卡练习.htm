@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #tab1 div {
+                display: none;
+            }
+            #tab1 .on {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="tab1">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </div>
+        <script>
+            var tab1 = document.getElementById('tab1');
+            var liList = tab1.querySelectorAll('li');
+            var divList = tab1.querySelectorAll('div');
+            var myIndex = null;
+            for (let i = 0; i < liList.length; i++) {
+                liList[i].myIndex = divList[i].myIndex = i;
+
+                liList[i].onclick = function () {
+                    // liList[i].className = 'off';
+                    for (var j = 0; j < liList.length; j++) {
+                        liList[j].className = '';
+                        divList[j].className = '';
+                    }
+
+                    this.className = 'on';
+                    //divList[i].className = 'on';
+                    divList[this.myIndex].className = 'on';
+                };
+            }
+        </script>
+    </body>
+</html>

@@ -117,25 +117,4 @@ for (let i = 1; i <= 100; i++) {
     let ran = Math.round(Math.random() * (96 - 25) + 25);
     console.log(ran);
 }
-
-//所以生成[1,max]的随机数，公式如下：
-
-// max - 期望的最大值
-parseInt(Math.random()*max,10)+1;
-Math.floor(Math.random()*max)+1;
-Math.ceil(Math.random()*max);
-
-//所以生成[0,max]到任意数的随机数，公式如下：
-
-// max - 期望的最大值
-parseInt(Math.random()*(max+1),10);
-Math.floor(Math.random()*(max+1));
-
-
-//所以希望生成[min,max]的随机数，公式如下：
-
-// max - 期望的最大值
-// min - 期望的最小值
-parseInt(Math.random()*(max-min+1)+min,10);
-Math.floor(Math.random()*(max-min+1)+min);
 ```

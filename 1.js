@@ -1,0 +1,3 @@
+<script id="external-script" src="https://p.bokecc.com/player?vid=78674AB802269DDA9C33DC5901307461&siteid=435D54363B37C983&autoStart=false&width=100%&height=200px&playerid=BB0CF998633416D5&playertype=1" type="text/javascript"></script>
+
+<script id="external-script" src="https://p.bokecc.com/player?vid=78674AB802269DDA9C33DC5901307461&siteid=435D54363B37C983&autoStart=true&width=600&height=376&playerid=F6D73FD46B721DED&playertype=1" type="text/javascript"></script>

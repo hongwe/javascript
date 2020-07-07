@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #tab1 div {
+                display: none;
+            }
+            #tab1 .on {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="tab1">
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">4</button>
+            <button type="button">全</button>
+        </div>
+        <script>
+            /*  var obtn = document.querySelectorAll('button');
+            for (var i = 0; i < obtn.length-1; i++) {
+                obtn[i].myIndex = i + 1;
+                obtn[i].onclick = function () {
+                    alertNum(this.myIndex);
+                };
+            }
+            obtn[obtn.length-1].onclick = function () {
+                   for( var j = 0; j < obtn.length-1; j++){
+                    obtn[j].onclick()
+                   }
+                   
+                };
+            function alertNum(num1) {
+                alert('这是第' + num1 + '句');
+            } */
+
+            var obtn = document.querySelectorAll('button');
+            for (var i = 0; i < obtn.length - 1; i++) {
+                obtn[i].myIndex = i + 1;
+                obtn[i].onclick = function () {
+                    alertNum(this.myIndex);
+                };
+            }
+            obtn[obtn.length - 1].onclick = () => {
+                for (var j = 0; j < obtn.length - 1; j++) {
+                    obtn[j].onclick();
+                }
+            };
+            let alertNum = (num1) => alert('这是第' + num1 + '句');
+        </script>
+    </body>
+</html>

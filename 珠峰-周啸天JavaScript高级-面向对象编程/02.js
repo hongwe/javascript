@@ -28,7 +28,7 @@ var obj = {
     n: 3,
     fn: (function (n) {
         n *= 2;
-        this.n += 2;
+        this.n += 2;//=>this=>window
         var n = 5;
         return function (m) {
             this.n *= 2;
@@ -39,6 +39,7 @@ var obj = {
 var fn = obj.fn;
 fn(3);
 obj.fn(3);
+
 console.log(n, obj.n);
 
 //=>
@@ -49,7 +50,7 @@ console.log(n, obj.n);
 /* 
 全局作用域
     升 :var n; var obj; var fn;
-    n= -2- =>4
+    n= -2- =>4 =>8
     obj = aaafff000
     fn =obj.fn
         = bbbfff111
@@ -69,7 +70,7 @@ aaafff000
     变量提升: -var n-
     n*2;  =>n=4
     this.n+=2 =>this:window
-    n=5
+    n=5 => 6=>7
     retunrn bbbfff111 
 
     不销毁

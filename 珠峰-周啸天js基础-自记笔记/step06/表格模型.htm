@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            dl { width: 200px; border: 1px solid #000;}
+            dt {float: left; border: 1px solid #000;}
+            dd {float: left; border: 1px solid #000;}
+        </style>
+    </head>
+    <body>
+        <table id="tt">
+            <thead>
+                <tr>
+                    <th>t1</th>
+                    <th>t2</th>
+                    <th>t3</th>
+                    <th>t4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>td11</td>
+                    <td>td12</td>
+                    <td>td13</td>
+                    <td>td14</td>
+                </tr>
+                <tr>
+                    <td>td21</td>
+                    <td>td22</td>
+                    <td>td23</td>
+                    <td>td24</td>
+                </tr>
+                <tr>
+                    <td>td31</td>
+                    <td>td32</td>
+                    <td>td33</td>
+                    <td>td34</td>
+                </tr>
+            </tbody>
+        </table>
+
+<dl>
+
+        <dt>T1</dt>
+        <dd>11</dd>
+        <dd>12</dd>
+        <dd>13</dd>
+        <dt>T2</dt>
+        <dd>21</dd>
+        <dd>22</dd>
+        <dd>23</dd>
+        <dt>T3</dt>
+        <dd>31</dd>
+        <dd>32</dd>
+        <dd>33</dd>
+
+</dl>
+
+        <script>
+            function setColSpan() {
+                var x = document.getElementById('tt').rows[0].cells;
+                x[0].colSpan = '2';
+                x[1].colSpan = '2';
+                
+            }
+        </script>
+    </body>
+</html>

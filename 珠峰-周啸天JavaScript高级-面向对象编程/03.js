@@ -11,8 +11,9 @@ var utils = (function () {
     };
 })();
 
-//=> codeA
 
+
+//=> codeA
 var skipRender = (function () {
     var fn = function () {
         //...

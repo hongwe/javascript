@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            // let time = '2019-7-4 12:6:23';
+            // //=> 变为自己需要呈现的格式,例如:
+            // // "2019年07月24日 12时06分23秒"
+            // // "2019年07月24日"
+            // // "07/24 12:06"
+            // //  time = time.replace('-','年').replace('-','月').replace(' ','日').replace(':','时').replace(':','分')+ '秒'
+            // // console.log(time);
+            // let n = time.split(' ');
+
+            // console.log(n[0]);
+            // console.log(n[1]);
+            // let m = n[0].split('-');
+            // let x = n[1].split(':');
+            // /* console.log(m);
+            // console.log(x); */
+            // let y = m.concat(x);
+
+            // function addZero(ary) {
+            //     for (key in ary) {
+            //         if (ary[key].length < 2) {
+            //             ary[key] = '0' + ary[key];
+            //         }
+            //     }
+            //     return ary
+            // }
+            // console.log(y);
+            // console.log(addZero(y));
+
+            let url =
+                'http://www.zhufengpeixun.cn/index.html?lx=1&name=zhufeng&teacher=aaa#box';
+            /*
+            结果:{
+                lx:1,
+                name:'zhufeng'
+                teacher:'aaa'
+                HASH:'box'
+            }
+            */
+            var obj = {};
+            var askIndex = url.indexOf('?');
+            var wellIndex = url.indexOf('#');
+            var askText = url.substring(askIndex + 1, wellIndex);
+            var wellText = url.substring(wellIndex + 1);
+            // console.log(askText);
+            // console.log(wellText);
+
+            var ary1 = askText.split('&');
+
+            //console.log(ary1);
+            for (var i = 0; i < ary1.length; i++) {
+                var n = ary1[i].split('=');
+               
+                var key = n[0];
+                var value = n[1];
+               
+                obj[key] =value
+            }
+            obj['HASH'] = wellText;
+            console.log(obj);
+        </script>
+    </body>
+</html>

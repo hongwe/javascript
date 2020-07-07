@@ -4,9 +4,13 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>定时器 无缝滚动</title>
-        <link rel="stylesheet" href="css.css" id="lina" />
+        <!-- <link rel="stylesheet" href="css.css" id="lina" /> -->
     </head>
     <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
         .red {
             width: 200px;
             height: 20px;
@@ -18,43 +22,21 @@
             height: 20px;
             background: green;
         }
+        li {
+            list-style: none;
+            float: left;
+            width: 178px;
+            height: 100px;
+        }
+        .wfgundong {
+            width: 712px;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        #list8 { position: absolute;top:0;left:0}
     </style>
-    <script type="text/javascript">
-        window.onload = function() {
-            var oWfyd = document.getElementById("wfgundong");
-            var oUl = document.getElementById("list8");
-            var aLi = oUl.getElementsByTagName("li");
-            var speed = 2;
-            oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
-            oUl.style.width = aLi[0].offsetWidth * aLi.length + "px";
-
-            function move() {
-                if (oUl.offsetLeft < -oUl.offsetWidth / 2) {
-                    oUl.style.left = 0;
-                }
-                if (oUl.offsetLeft > 0) {
-                    oUl.style.left = -oUl.offsetWidth / 2 + "px";
-                }
-
-                oUl.style.left = oUl.offsetLeft + speed + "px";
-            }
-
-            var timer = setInterval(move, 30);
-
-            oWfyd.onmouseover = function() {
-                clearInterval(timer);
-            };
-            oWfyd.onmouseout = function() {
-                timer = setInterval(move, 30);
-            };
-            document.getElementsByTagName("a")[0].onclick = function() {
-                speed = -2;
-            };
-            document.getElementsByTagName("a")[1].onclick = function() {
-                speed = 2;
-            };
-        };
-    </script>
+    
 
     <body>
         <a href="javascript:;">向左</a>
@@ -68,4 +50,41 @@
             </ul>
         </div>
     </body>
+    <script type="text/javascript">
+        // window.onload = function () {
+            var oWfyd = document.getElementById('wfgundong');
+            console.log(oWfyd)
+            var oUl = document.getElementById('list8');
+            var aLi = oUl.getElementsByTagName('li');
+            var speed = 2;
+            oUl.innerHTML = oUl.innerHTML + oUl.innerHTML;
+            oUl.style.width = aLi[0].offsetWidth * aLi.length + 'px';
+            var timer = setInterval(move, 30);
+            function move() {
+                if (oUl.offsetLeft < -oUl.offsetWidth / 2) {
+                    oUl.style.left = 0;
+                }
+                if (oUl.offsetLeft > 0) {
+                    oUl.style.left = -oUl.offsetWidth / 2 + 'px';
+                }
+
+                oUl.style.left = oUl.offsetLeft + speed + 'px';
+            }
+
+            
+
+            oWfyd.onmouseover = function () {
+                clearInterval(timer);
+            };
+            oWfyd.onmouseout = function () {
+                timer = setInterval(move, 30);
+            };
+            document.getElementsByTagName('a')[0].onclick = function () {
+                speed = -2;
+            };
+            document.getElementsByTagName('a')[1].onclick = function () {
+                speed = 2;
+            };
+        // };
+    </script>
 </html>

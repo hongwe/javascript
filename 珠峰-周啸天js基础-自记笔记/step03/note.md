@@ -123,7 +123,7 @@ console.log(sum(10, 20));
 
 
 
-function fn(n) {
+function fn(n,m) {
     return function(m) {
         return n + m;
     };

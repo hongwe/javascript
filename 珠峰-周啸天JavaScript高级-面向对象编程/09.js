@@ -16,5 +16,30 @@
 3. 每一个对象都有一个 __proto__的属性指向当前实例所属的类的prototype(如果不能确定它是谁的实例,都是Object的实例)
 
 
-图9-1 9-2
+图9-1
+原型链
+它是一种基于 __proto__向上查找的机制.当我们操作实例的某个属性或者方法的时候,首先先找自己空间私有属性或方法
+1,找到了,则结束查找,使用自己私有的即可
+2.没有找到,则基于 __proto__找所属类的prototype,如果找到就用这个共有的,如果没找到,基于原型上的__proto__继续向上查找,一直找到Object.prototype的原型为止,如果再没有,操作的属性或方法不存在
+
+
+*/
+
+function Fn() {
+    var n = 100;
+    this.AA = function () {
+        console.log('AA[私]')
+    };
+    this.BB = function () {
+        console.log('BB[私]')
+    }
+}
+Fn.prototype.AA = function () {
+    console.log('AA[公]')
+}
+var f1 = new Fn
+var f2 = new Fn
+
+/* 
+9-2
 */

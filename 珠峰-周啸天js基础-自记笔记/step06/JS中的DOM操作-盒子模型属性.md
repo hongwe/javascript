@@ -84,7 +84,7 @@ let w = box.style.width
 >   - width/height
 >   - top/left
 >   - parent
-> - scrllo
+> - scroll
 >   - width /height
 >   - top/left
 >
@@ -113,7 +113,7 @@ box.clientTop
 
 ```
 
-![](D:\github\javascript\zhufengpeixun\step06\css盒子模型.gif)
+![](\css盒子模型.gif)
 
 ```javascript
 let box = document.getElementById('box')
@@ -159,7 +159,7 @@ document.body.offsetParent = null
 //=>offsetLeft: 距离其夫参照物的左偏移(当前元素的外边框到服参照物的里边框)
 ```
 
-![](C:\Users\hongwe\Documents\坚果云\我的坚果云\学习笔记和例子\zhufengpeixun\step06\元素偏移值.gif)
+![](\元素偏移值.gif)
 
 
 

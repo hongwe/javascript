@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            #tab1 div {
+                display: none;
+            }
+            #tab1 .on {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="tab1">
+            <input type="text" id="inp" />
+            <select name="" id="sel">
+                <option value="0">性别</option>
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+            <button type="button" id="btn">问候</button>
+        </div>
+
+        <script>
+            var inp = document.getElementById('inp');
+            var sel = document.getElementById('sel');
+            var btn = document.getElementById('btn');
+
+            btn.onclick = function () {
+                if (inp.value != null || inp.value !='') {
+                    if (sel.value == 0) {
+                        alert(inp.value + '您好');
+                    } else if (sel.value == 1) {
+                        alert(inp.value + '先生,您好');
+                    } else {
+                        alert(inp.value + '女士,您好');
+                    }
+                } else {
+                    alert('请输入姓名');
+                }
+            };
+        </script>
+    </body>
+</html>

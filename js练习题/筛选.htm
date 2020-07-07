@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            p {
+                max-width: 100px;
+                word-wrap: break-word;
+                line-height: 30px;
+                font-size: 14px;
+                padding: 5px;
+                box-sizing: border-box;
+            }
+        </style>
+
+        <table>
+            <tr>
+                <td>视频</td>
+                <td id="s1">
+                    <p>文字1文字1文字1文字1</p>
+                    <p>文字2</p>
+                    <p>文字3</p>
+                    <p>文字4</p>
+                </td>
+                <td id="s2">
+                    <p><input type="text" value="1" /></p>
+                    <p>
+                        <input type="text" value="2" /><input
+                            type="text"
+                            value="2"
+                        />
+                    </p>
+                    <p><input type="text" value="3" /></p>
+                    <p><input type="text" value="4" /></p>
+                </td>
+            </tr>
+        </table>
+
+        <script>
+            var s1 = document.getElementById('s1');
+            var s2 = document.getElementById('s2');
+            var p1 = s1.getElementsByTagName('p');
+            var p2 = s2.getElementsByTagName('p');
+
+
+
+             for (var i = 0; i < p1.length; i++) {
+                 var j = 10
+                if (p1[i].clientHeight > p2[i].clientHeight) {
+                    p1[i].style.height = p2[i].style.height =
+                        p1[i].clientHeight - j + 'px';
+                    p2[i].style.lineHeight = p1[i].clientHeight - j + 'px';
+                    p1[i].style.lineHeight =
+                        (p1[i].clientHeight - j) / 2 + 'px';
+                } else if (p1[i].clientHeight < p2[i].clientHeight) {
+                    p2[i].style.height = p1[i].style.height =
+                        p2[i].clientHeight - j + 'px';
+                    p1[i].style.lineHeight = p2[i].clientHeight - j + 'px';
+                    p2[i].style.lineHeight =
+                        (p2[i].clientHeight - j) / 2 + 'px';
+                } else {
+                    p1[i].style.height = p2[i].style.height =
+                        p1[i].clientHeight - j + 'px';
+                    p1[i].style.lineHeight = p2[i].style.lineHeight =
+                        p1[i].clientHeight - j + 'px';
+                }
+            } 
+           
+
+        </script>
+    </body>
+</html>
