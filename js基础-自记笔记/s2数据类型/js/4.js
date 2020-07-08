@@ -6,11 +6,11 @@ let person = {
 	1: 100
 };
 // 删除属性
-/* // =>真删除：把属性彻底干掉
+// =>真删除：把属性彻底干掉
 delete person[1];
 // =>假删除：属性还在，值为空
 person.weight = null;
-console.log(person); */
+console.log(person);
 
 // 设置属性名属性值
 // =>属性名不能重复，如果属性名已经存在，不属于新增属于修改属性值
@@ -36,12 +36,12 @@ console.log(person[1]);
  *   2. 天生默认一个属性名 length ，存储数组的长度
  */
 let ary = [12, '哈哈', true, 13];
-/* console.log(ary.length);
-console.log(ary['length']);
-console.log(ary[1]);
+console.log(ary.length);//=>4
+console.log(ary['length']);//=>4
+console.log(ary[1]);//=>哈哈
 // 第一项索引0  最后一项索引 ary.length-1
-console.log(ary[0]);
-console.log(ary[ary.length - 1]); */
+console.log(ary[0]);//=>12
+console.log(ary[ary.length - 1]);//=>13
 
 // 向数组末尾追加内容
 ary[ary.length] = 100;

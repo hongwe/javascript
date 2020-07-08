@@ -1,14 +1,17 @@
-/* let a = 12;
+let a = 12;
 let b = a;
 b = 13;
 console.log(a);
+//=>12
 
-let n = {
+let n1 = {
 	name: '珠峰'
 };
-let m = n;
-m.name = '培训';
-console.log(n.name); */
+let m1 = n1;
+m1.name = '培训';
+console.log(n1.name);
+//=>培训
+
 
 let n = [10, 20];
 let m = n;
@@ -20,3 +23,4 @@ m = x;
 m[1] = 300;
 n[2] = 400;
 console.log(n, m, x);
+//(3) [100, 20, 400] (2) [200, 300] (2) [200, 300]

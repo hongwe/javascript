@@ -1,61 +1,60 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>鼠标滑过显示详情</title>
+        <!-- IMPORT CSS -->
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
 
-<head>
-	<meta charset="UTF-8">
-	<title>鼠标滑过显示详情</title>
-	<!-- IMPORT CSS -->
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-		}
+            .box {
+                box-sizing: border-box;
+                margin: 20px auto;
+                width: 200px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                border: 1px solid lightcoral;
+                position: relative;
+                /* 设置鼠标是一个小手 */
+                cursor: pointer;
+            }
 
-		.box {
-			box-sizing: border-box;
-			margin: 20px auto;
-			width: 200px;
-			height: 40px;
-			line-height: 40px;
-			text-align: center;
-			border: 1px solid lightcoral;
-			position: relative;
-			/* 设置鼠标是一个小手 */
-			cursor: pointer;
-		}
+            .box .detail {
+                /* display: none; */
+                position: absolute;
+                right: -1px;
+                top: 38px;
+                z-index: -1;
+                box-sizing: border-box;
+                width: 500px;
+                height: 100px;
+                line-height: 100px;
+                text-align: center;
+                border: 1px solid lightcoral;
+            }
+        </style>
+    </head>
 
-		.box .detail {
-			/* display: none; */
-			position: absolute;
-			right: -1px;
-			top: 38px;
-			z-index: -1;
-			box-sizing: border-box;
-			width: 500px;
-			height: 100px;
-			line-height: 100px;
-			text-align: center;
-			border: 1px solid lightcoral;
-		}
-	</style>
-</head>
-
-<body>
-	<div class="box" id="box">
-		<span>购物车</span>
-		<div class="detail" id="detail" style="display: none">
-			购物车的相关信息
-		</div>
-	</div>
-	<!-- 
+    <body>
+        <div class="box" id="box">
+            <span>购物车</span>
+            <div class="detail" id="detail" style="display: none;">
+                购物车的相关信息
+            </div>
+        </div>
+        <!--
 		传统基于操作DOM的方式实现业务需求
 		1. 想操作谁就先获取谁
 		2. 给某元素绑定某事件
 		3. 在事件触发的时候修改元素的样式等
 	 -->
-	<!-- IMPORT JS -->
-	<script>
-		/* // document.getElementById([ID])：在整个文档中，通过元素的ID获取到当前这个元素对象
+        <!-- IMPORT JS -->
+        <script>
+            /* // document.getElementById([ID])：在整个文档中，通过元素的ID获取到当前这个元素对象
 		let box = document.getElementById('box');
 		let detail = document.getElementById('detail');
 
@@ -74,22 +73,21 @@
 				box.style.borderBottomColor = 'lightcoral';
 			}
 		} */
-	</script>
+        </script>
 
-	<script>
-		let box = document.getElementById('box');
-		let detail = document.getElementById('detail');
-		box.onclick = function () {
-			let n = detail.style.display;
-			if (n === 'none') {
-				detail.style.display = 'block';
-				box.style.borderBottomColor = '#FFF';
-			}else{
-				detail.style.display = 'none';
-				box.style.borderBottomColor = 'lightcoral';
-			}
-		}
-	</script>
-</body>
-
+        <script>
+            let box = document.getElementById('box');
+            let detail = document.getElementById('detail');
+            box.onclick = function () {
+                let n = detail.style.display;
+                if (n === 'none') {
+                    detail.style.display = 'block';
+                    box.style.borderBottomColor = '#FFF';
+                } else {
+                    detail.style.display = 'none';
+                    box.style.borderBottomColor = 'lightcoral';
+                }
+            };
+        </script>
+    </body>
 </html>

@@ -23,7 +23,7 @@
 		let valBox = document.getElementById('valBox');
 
 		submit.onclick = function () {
-			// 1.获取文本框中的信息  
+			// 1.获取文本框中的信息
 			// 文本框.value 获取输入的内容，格式是字符串
 			let year = Number(workYear.value);
 			let money = Number(workMoney.value);
@@ -31,7 +31,7 @@
 				alert('输入的内容是非法格式~~');
 				return;
 			}
-			// 2.经过逻辑处理，计算出结果 
+			// 2.经过逻辑处理，计算出结果
 			let result = null;
 			if (year < 1) {
 				result = money >= 8000 ? money * 1.2 : money;

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>定时器 无缝滚动</title>
+        <!-- <link rel="stylesheet" href="css.css" id="lina" /> -->
+    </head>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .red {
+            width: 200px;
+            height: 20px;
+            background: red;
+        }
+
+        .green {
+            width: 200px;
+            height: 20px;
+            background: green;
+        }
+        li {
+            list-style: none;
+            float: left;
+            width: 178px;
+            height: 100px;
+        }
+        .wfgundong {
+            width: 712px;
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+        #listimg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+
+    <body>
+        <a href="javascript:;">向左</a>
+        <a href="javascript:;">向右</a>
+        <div class="wfgundong" id="wfgundong">
+            <ul id="listimg">
+                <li><img src="images/1.png" /></li>
+                <li><img src="images/2.png" /></li>
+                <li><img src="images/3.png" /></li>
+                <li><img src="images/4.png" /></li>
+            </ul>
+        </div>
+    </body>
+    <script type="text/javascript">
+        // window.onload = function () {
+
+        var wfDiv = document.getElementById('wfgundong'),
+            listImg = document.getElementById('listimg'),
+            oli = listImg.getElementsByTagName('li'),
+            speed = 2;
+        listImg.innerHTML += listImg.innerHTML;
+        listImg.style.width = oli[0].offsetWidth * oli.length + 'px';
+        var timer = setInterval(move, 10);
+        function move() {
+            if (listImg.offsetLeft <= listImg.offsetWidth) {
+                if (listImg.offsetLeft < -listImg.offsetWidth / 2) {
+                    listImg.style.left = 0;
+                }
+                if (listImg.offsetLeft > 0) {
+                    listImg.style.left = -listImg.offsetWidth / 2 + 'px';
+                }
+
+                listImg.style.left = listImg.offsetLeft + speed + 'px';
+            }
+        }
+        wfDiv.onmouseover = function () {
+            clearInterval(timer);
+        };
+        wfDiv.onmouseout = function () {
+            timer = setInterval(move, 30);
+        };
+        document.getElementsByTagName('a')[0].onclick = function () {
+            speed = -2;
+        };
+        document.getElementsByTagName('a')[1].onclick = function () {
+            speed = 2;
+        };
+
+        // };
+    </script>
+</html>
