@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>暑期运动</title>
+    </head>
+    <body>
+        <style>
+            html,
+            body,
+            div,
+            li {
+                margin: 0;
+                padding: 0;
+            }
+            .list li {
+                list-style: none;
+                border: 1px solid #f2f2f2;
+                padding: 5px;
+                font-size: 20px;
+            }
+            .list li.on {
+                background-color: red;
+                color: #fff;
+                display: block;
+            }
+            .list li.off {
+                display: none;
+            }
+        </style>
+        <div>
+            <ul class="list" id="list">
+                <li>跳绳：300次</li>
+                <li>跑步：400-1500米</li>
+                <li>仰卧起坐：30个/组每次1—3组</li>
+                <li>开合跳：30个/组每次3—5组</li>
+                <li>蹲起： 20个/组每次2组</li>
+                <li>高抬腿跑：20个/组每次3组</li>
+                <li>卷腹：25个/组每次2—5组</li>
+                <li>俯卧撑：5---10个/组每次2—4组</li>
+                <li>平板支撑：30秒---60秒/组 每次2—4组</li>
+            </ul>
+            <button type="button" id="btnstart">随机开始</button>
+            <button type="button" id="btnend">选定</button>
+        </div>
+        <script>
+            var btnS = document.getElementById('btnstart');
+            var btnE = document.getElementById('btnend');
+            var oli = document.querySelectorAll('li');
+            var timer = null;
+            function random() {
+                var arr = [];
+                var sj = null;
+                for (let i = 0; i < 2; i++) {
+                    sj = Math.floor(Math.random() * 9) + 1;
+                    if (arr.indexOf(sj) == -1) {
+                        arr.push(sj);
+                    } else {
+                        i--;
+                    }
+                }
+
+                for (let j = 0; j < 9; j++) {
+                    oli[j].className = 'off';
+                }
+                for (let x = 0; x < arr.length; x++) {
+                    oli[arr[x] - 1].className = 'on';
+                }
+            }
+
+            btnS.onclick = function () {
+                timer = setInterval('random()', 30);
+                btnS.disabled = true;
+            };
+            btnE.onclick = function () {
+                clearInterval(timer);
+                btnS.disabled = false;
+            };
+        </script>
+    </body>
+</html>
