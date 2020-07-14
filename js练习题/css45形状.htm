@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css形状45.css" />
+    </head>
+    <body>
+        <ul id="list" class="list"></ul>
+    </body>
+
+    <script>
+        const cssArr = [
+            'square',
+            'rectangle',
+            'circle',
+            'oval',
+            'triangle-up',
+            'triangle-down',
+            'triangle-left',
+            'triangle-right',
+            'triangle-topleft',
+            'triangle-topright',
+            'triangle-bottomleft',
+            'triangle-bottomright',
+            'curvedarrow',
+            'trapezoid',
+            'parallelogram',
+            'star-six',
+            'star-five',
+            'pentagon',
+            'hexagon',
+            'octagon',
+            'heart',
+            'infinity',
+            'diamond',
+            'diamond-shield',
+            'diamond-narrow',
+            'cut-diamond',
+            'egg',
+            'pacman',
+            'talkbubble',
+            'burst-12',
+            'burst-12',
+            'yin-yang',
+            'badge-ribbon',
+            'space-invader',
+            'tv',
+            'chevron',
+            'magnifying-glass',
+            'facebook-icon',
+            'moon',
+            'flag',
+            'cone',
+            'cross',
+            'base',
+            'pointer',
+            'lock',
+        ];
+        var list = document.getElementById('list');
+        for (let i = 0; i < cssArr.length; i++) {
+            list.innerHTML +=
+                '<li><div id="' +
+                cssArr[i] +
+                '"></div><div>' +
+                cssArr[i] +
+                '</div></li>';
+        }
+    </script>
+</html>

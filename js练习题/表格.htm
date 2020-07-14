@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>表格</title>
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <label for=""
+            >姓名
+            <input type="text" id="username" />
+        </label>
+        <label for=""
+            >联系方式
+            <input type="text" id="lx" />
+        </label>
+        <label for=""
+            >年龄
+            <input type="text" id="age" />
+        </label>
+        <button type="button" id="btn">提交</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>联系方式</th>
+                    <th>年龄</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <tr>
+                    <td>name</td>
+                    <td>lx</td>
+                    <td>age</td>
+                    <td><button type="button" class="del">删除</button></td>
+                </tr> -->
+            </tbody>
+        </table>
+        <script>
+            var oNaome = document.getElementById('username'),
+                oLx = document.getElementById('lx'),
+                oAge = document.getElementById('age'),
+                oBtn = document.getElementById('btn'),
+                oDel = document.querySelectorAll('.del'),
+                list = document.querySelector('tbody');
+
+            oBtn.onclick = function () {
+                list.innerHTML +=
+                    '<td>' +
+                    oNaome.value +
+                    '</td><td>' +
+                    oLx.value +
+                    '</td><td>' +
+                    oAge.value +
+                    '</td><td>' +
+                    '<button type="button" class="del" onclick="del(this)">删除</button></td>';
+                // oDel = document.querySelectorAll('.del')
+                // console.log(oDel);
+            };
+            //     document.getElementById("btn").addEventListener("click",function(){
+            //     console.log("second click function")
+            //  },false);
+            //     oDel[0].onclick=function(){
+            //     console.log(this);
+            //}
+            // for (let i = 0; i < oDel.length; i++) {
+            //     oDel[i].onclick = function () {
+            //         var trNode = this.parentNode.parentNode;
+            //             trNode.parentNode.removeChild(trNode);
+            //     };
+            //}
+
+            function del(obj) {
+                console.log(obj.parentNode.parentNode);
+                var trNode = obj.parentNode.parentNode;
+                trNode.parentNode.removeChild(trNode);
+            }
+        </script>
+    </body>
+</html>
